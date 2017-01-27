@@ -1,147 +1,200 @@
 package com.marist.mscs721;
 
+import com.google.gson.Gson;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Reader;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RoomScheduler {
-	protected static Scanner keyboard = new Scanner(System.in);
+  protected static Scanner keyboard = new Scanner(System.in);
 
-	public static void main(String[] args) {
-		Boolean end = false;
-		ArrayList<Room> rooms = new ArrayList<Room>();
+  public static void main(String[] args){
+    Boolean end = false;
+    ArrayList<Room> rooms = new ArrayList<Room>();
 
-		while (!end) {
-			switch (mainMenu()) {
+    while (!end) {
+      switch (mainMenu()) {
 
-			case 1:
-				System.out.println(addRoom(rooms));
-				break;
-			case 2:
-				System.out.println(removeRoom(rooms));
-				break;
-			case 3:
-				System.out.print(scheduleRoom(rooms));
-				break;
-			case 4:
-				System.out.println(listSchedule(rooms));
-				break;
-			case 5:
-				System.out.println(listRooms(rooms));
-				break;
-			}
+        case 1:
+          System.out.println(addRoom(rooms));
+          break;
+        case 2:
+          System.out.println(removeRoom(rooms));
+          break;
+        case 3:
+          System.out.print(scheduleRoom(rooms));
+          break;
+        case 4:
+          System.out.println(listSchedule(rooms));
+          break;
+        case 5:
+          System.out.println(listRooms(rooms));
+          break;
+        case 6:
+          System.out.println(exportToJson(rooms));
+          break;
+        case 7:
+          System.out.println(importFromJson(rooms));
+          break;
+      }
 
-		}
+    }
 
-	}
+  }
 
-	protected static String listSchedule(ArrayList<Room> roomList) {
-		String roomName = getRoomName();
-		System.out.println(roomName + " Schedule");
-		System.out.println("---------------------");
-		
-		for (Meeting m : getRoomFromName(roomList, roomName).getMeetings()) {
-			System.out.println(m.toString());
-		}
+  protected static String listSchedule(ArrayList<Room> roomList) {
+    String roomName = getRoomName();
+    System.out.println(roomName + " Schedule");
+    System.out.println("---------------------");
 
-		return "";
-	}
+    for (Meeting m : getRoomFromName(roomList, roomName).getMeetings()) {
+      System.out.println(m.toString());
+    }
 
-	protected static int mainMenu() {
-		System.out.println("Main Menu:");
-		System.out.println("  1 - Add a room");
-		System.out.println("  2 - Remove a room");
-		System.out.println("  3 - Schedule a room");
-		System.out.println("  4 - List Schedule");
-		System.out.println("  5 - List Rooms");
-		System.out.println("Enter your selection: ");
+    return "";
+  }
 
-		return keyboard.nextInt();
-	}
+  protected static int mainMenu() {
+    System.out.println("Main Menu:");
+    System.out.println("  1 - Add a room");
+    System.out.println("  2 - Remove a room");
+    System.out.println("  3 - Schedule a room");
+    System.out.println("  4 - List Schedule");
+    System.out.println("  5 - List Rooms");
+    System.out.println("  6 - Export to JSON");
+    System.out.println("  7 - Import from JSON");
+    System.out.println("Enter your selection: ");
 
-	protected static String addRoom(ArrayList<Room> roomList) {
-		System.out.println("Add a room:");
-		String name = getRoomName();
-		System.out.println("Room capacity?");
-		int capacity = keyboard.nextInt();
+    return keyboard.nextInt();
+  }
 
-		Room newRoom = new Room(name, capacity);
-		roomList.add(newRoom);
+  protected static String addRoom(ArrayList<Room> roomList) {
+    System.out.println("Add a room:");
+    String name = getRoomName();
+    System.out.println("Room capacity?");
+    int capacity = keyboard.nextInt();
 
-		return "Room '" + newRoom.getName() + "' added successfully!";
-	}
+    Room newRoom = new Room(name, capacity);
+    roomList.add(newRoom);
 
-	protected static String removeRoom(ArrayList<Room> roomList) {
-		System.out.println("Remove a room:");
-		roomList.remove(findRoomIndex(roomList, getRoomName()));
+    return "Room '" + newRoom.getName() + "' added successfully!";
+  }
 
-		return "Room removed successfully!";
-	}
+  protected static String removeRoom(ArrayList<Room> roomList) {
+    System.out.println("Remove a room:");
+    roomList.remove(findRoomIndex(roomList, getRoomName()));
 
-	protected static String listRooms(ArrayList<Room> roomList) {
-		System.out.println("Room Name - Capacity");
-		System.out.println("---------------------");
+    return "Room removed successfully!";
+  }
 
-		for (Room room : roomList) {
-			System.out.println(room.getName() + " - " + room.getCapacity());
-		}
+  protected static String listRooms(ArrayList<Room> roomList) {
+    System.out.println("Room Name - Capacity");
+    System.out.println("---------------------");
 
-		System.out.println("---------------------");
+    for (Room room : roomList) {
+      System.out.println(room.getName() + " - " + room.getCapacity());
+    }
 
-		return roomList.size() + " Room(s)";
-	}
+    System.out.println("---------------------");
 
-	protected static String scheduleRoom(ArrayList<Room> roomList) {
-		System.out.println("Schedule a room:");
-		String name = getRoomName();
+    return roomList.size() + " Room(s)";
+  }
 
-		System.out.println("Start Date? (yyyy-mm-dd):");
-		String startDate = keyboard.next();
-		System.out.println("Start Time?");
-		String startTime = keyboard.next();
-		startTime = startTime + ":00.0";
+  protected static String scheduleRoom(ArrayList<Room> roomList) {
+    System.out.println("Schedule a room:");
+    String name = getRoomName();
 
-		System.out.println("End Date? (yyyy-mm-dd):");
-		String endDate = keyboard.next();
-		System.out.println("End Time?");
-		String endTime = keyboard.next();
-		endTime = endTime + ":00.0";
+    System.out.println("Start Date? (yyyy-mm-dd):");
+    String startDate = keyboard.next();
+    System.out.println("Start Time?");
+    String startTime = keyboard.next();
+    startTime = startTime + ":00.0";
 
-		Timestamp startTimestamp = Timestamp.valueOf(startDate + " " + startTime);
-		Timestamp endTimestamp = Timestamp.valueOf(endDate + " " + endTime);
+    System.out.println("End Date? (yyyy-mm-dd):");
+    String endDate = keyboard.next();
+    System.out.println("End Time?");
+    String endTime = keyboard.next();
+    endTime = endTime + ":00.0";
 
-		System.out.println("Subject?");
-		String subject = keyboard.nextLine();
+    Timestamp startTimestamp = Timestamp.valueOf(startDate + " " + startTime);
+    Timestamp endTimestamp = Timestamp.valueOf(endDate + " " + endTime);
 
-		Room curRoom = getRoomFromName(roomList, name);
+    System.out.println("Subject?");
+    keyboard.nextLine();
+    // Eats newline input. Without this, I am not able to enter a subject
+    String subject = keyboard.nextLine();
 
-		Meeting meeting = new Meeting(startTimestamp, endTimestamp, subject);
+    Room curRoom = getRoomFromName(roomList, name);
 
-		curRoom.addMeeting(meeting);
+    Meeting meeting = new Meeting(startTimestamp, endTimestamp, subject);
 
-		return "Successfully scheduled meeting!";
-	}
+    curRoom.addMeeting(meeting);
 
-	protected static Room getRoomFromName(ArrayList<Room> roomList, String name) {
-		return roomList.get(findRoomIndex(roomList, name));
-	}
+    return "Successfully scheduled meeting!\n";
+  }
 
-	protected static int findRoomIndex(ArrayList<Room> roomList, String roomName) {
-		int roomIndex = 0;
+  protected static String exportToJson(ArrayList<Room> roomList){
+    Gson gson = new Gson();
 
-		for (Room room : roomList) {
-			if (room.getName().compareTo(roomName) == 0) {
-				break;
-			}
-			roomIndex++;
-		}
+    String json = gson.toJson(roomList);
+    System.out.println(json);
 
-		return roomIndex;
-	}
+    //2. Convert object to JSON string and save into a file directly
+    try (FileWriter writer = new FileWriter("file.json")) {
 
-	protected static String getRoomName() {
-		System.out.println("Room Name?");
-		return keyboard.next();
-	}
+      gson.toJson(roomList, writer);
+
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
+    return "Successfully exported objects to JSON!";
+  }
+
+  protected static String importFromJson(ArrayList<Room> roomList){
+    Gson gson = new Gson();
+
+    try (Reader reader = new FileReader("file.json")) {
+
+      // Convert JSON to Java Object
+        Room[] roomArr = gson.fromJson(reader, Room[].class);
+
+        for (int i = 0; i < roomArr.length; i++) {
+          roomList.add(roomArr[i]);
+        }
+
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
+    return "Successfully imported JSON to objects!";
+  }
+
+  protected static Room getRoomFromName(ArrayList<Room> roomList, String name) {
+    return roomList.get(findRoomIndex(roomList, name));
+  }
+
+  protected static int findRoomIndex(ArrayList<Room> roomList, String roomName) {
+    int roomIndex = 0;
+
+    for (Room room : roomList) {
+      if (room.getName().compareTo(roomName) == 0) {
+        break;
+      }
+      roomIndex++;
+    }
+
+    return roomIndex;
+  }
+
+  protected static String getRoomName() {
+    System.out.println("Room Name?");
+    return keyboard.next();
+  }
 
 }

@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 /**
  * This class is the main portion for the RoomScheduler program. It is a console based interface the prompts a user to
@@ -21,6 +22,13 @@ import java.util.Scanner;
  */
 public class RoomScheduler {
   protected static Scanner keyboard = new Scanner(System.in);
+  static final String SEPARATOR = "---------------------";
+  private static Logger LOGGER = Logger.getLogger("InfoLogging");
+
+
+  private RoomScheduler() {
+    throw new IllegalAccessError("Utility class");
+  }
 
   /**
    * Main method for the class. This is where the main menu is called, and the user is prompted to enter a number
@@ -35,25 +43,30 @@ public class RoomScheduler {
       switch (mainMenu()) {
 
         case 1:
-          System.out.println(addRoom(rooms));
+          addRoom(rooms);
           break;
         case 2:
-          System.out.println(removeRoom(rooms));
+          removeRoom(rooms);
           break;
         case 3:
-          System.out.print(scheduleRoom(rooms));
+          scheduleRoom(rooms);
           break;
         case 4:
-          System.out.println(listSchedule(rooms));
+          listSchedule(rooms);
           break;
         case 5:
-          System.out.println(listRooms(rooms));
+          listRooms(rooms);
           break;
         case 6:
-          System.out.println(exportToJson(rooms));
+          exportToJson(rooms);
           break;
         case 7:
-          System.out.println(importFromJson(rooms));
+          importFromJson(rooms);
+          break;
+        case 8:
+          end = true;
+          break;
+        default:
           break;
       }
 
@@ -71,11 +84,13 @@ public class RoomScheduler {
   protected static String listSchedule(ArrayList<Room> roomList) {
     String roomName = getRoomName();
     System.out.println(roomName + " Schedule");
-    System.out.println("---------------------");
+    System.out.println(SEPARATOR);
 
     for (Meeting m : getRoomFromName(roomList, roomName).getMeetings()) {
       System.out.println(m.toString());
     }
+
+    System.out.println(SEPARATOR);
 
     return "";
   }
@@ -97,6 +112,7 @@ public class RoomScheduler {
     System.out.println("  5 - List Rooms");
     System.out.println("  6 - Export to JSON");
     System.out.println("  7 - Import from JSON");
+    System.out.println("  8 - Quit program");
     System.out.println("Enter your selection: ");
 
     // Forces integer input
@@ -110,8 +126,8 @@ public class RoomScheduler {
       keyboard.nextLine();
     }
 
-    if (selection < 1 || selection > 7){
-      System.out.println("Please enter a valid number from 1 - 7.");
+    if (selection < 1 || selection > 8){
+      System.out.println("Please enter a valid number from 1 - 8.");
     }
 
     return selection;
@@ -178,13 +194,13 @@ public class RoomScheduler {
    */
   protected static String listRooms(ArrayList<Room> roomList) {
     System.out.println("Room Name - Capacity");
-    System.out.println("---------------------");
+    System.out.println(SEPARATOR);
 
     for (Room room : roomList) {
       System.out.println(room.getName() + " - " + room.getCapacity());
     }
 
-    System.out.println("---------------------");
+    System.out.println(SEPARATOR);
 
     return roomList.size() + " Room(s)";
   }
@@ -258,15 +274,26 @@ public class RoomScheduler {
     if(!roomList.isEmpty()) {
       for (int i = 0; i < roomList.size(); i++) {
         if (startTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(0).getStartTime())
-            && startTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime()) ||
-            startTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(0).getStartTime())
-                && endTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime()) ||
-            endTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(0).getStartTime())
-                && endTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime())||
-            startTimestamp.equals(getRoomFromName(roomList, name).getMeetings().get(0).getStartTime()) ||
-            endTimestamp.equals(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime())) {
-          System.out.println("Sorry, this meeting time conflicts with another meeting. " +
-              "Please select another meeting time.");
+            && startTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime())) {
+          System.out.println("Sorry, a meeting cannot start in the middle of another meeting");
+          return "";
+        }
+        else if (startTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(0).getStartTime())
+            && endTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime())){
+          System.out.println("Sorry, a meeting cannot start before and end after another meeting.");
+          return "";
+        }
+        else if(endTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(0).getStartTime())
+            && endTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime())){
+          System.out.println("Sorry, a meeting cannot end in the middle of another meeting");
+          return "";
+        }
+        else if(startTimestamp.equals(getRoomFromName(roomList, name).getMeetings().get(0).getStartTime())){
+          System.out.println("Sorry, a meeting start time cannot be the same as another meeting start time");
+          return "";
+        }
+        else if(endTimestamp.equals(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime())){
+          System.out.println("Sorry, a meeting end time cannot be the same as another meeting end time");
           return "";
         }
       }
@@ -301,7 +328,7 @@ public class RoomScheduler {
       gson.toJson(roomList, writer);
 
     } catch (IOException e) {
-      e.printStackTrace();
+      LOGGER.info(e.getMessage());
     }
 
     return "Successfully exported objects to JSON!";
@@ -326,7 +353,7 @@ public class RoomScheduler {
         }
 
     } catch (IOException e) {
-      e.printStackTrace();
+      LOGGER.info(e.toString());
     }
 
     return "Successfully imported JSON to objects!";
@@ -388,7 +415,7 @@ public class RoomScheduler {
    * @return  String  the name of the room that the user entered.
    */
   protected static String getRoomName() {
-    String selection = "";
+    String selection;
 
     System.out.println("Room Name?");
     // Eats new line character input

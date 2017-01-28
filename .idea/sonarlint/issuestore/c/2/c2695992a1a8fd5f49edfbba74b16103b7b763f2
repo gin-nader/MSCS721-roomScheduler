@@ -1,0 +1,100 @@
+
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(ïİ‡ˆÿÿÿÿÿ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(£ä£
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(˜øë¹
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(í†”Ñ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(„×ßÂùÿÿÿÿ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(ÿ¾ÂŒ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(»«ÁÆ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(õÙ£ûÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(¸¡ŠÜıÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(ò  ¥şÿÿÿÿ
+^squid:S2259"JNullPointerException might be thrown as 'getRoomFromName' is nullable here(€¶Ñ`
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(ÙÒ‚Â
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(åÂ¶ú
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(Œ±•øÿÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(œ«£úÿÿÿÿ
+:squid:S1166"%Either log or rethrow this exception.(ï­£Ä
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(¼¡éšüÿÿÿÿ
+:squid:S1166"%Either log or rethrow this exception.(œ›¿Ä
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(×¦ãö
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(’§Œˆ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(·Óúç
+ksquid:S3008"QRename this field "LOGGER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èÜ·’şÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(ö£§Øùÿÿÿÿ
+N
+squid:S106";Replace this usage of System.out or System.err by a logger.(€ür
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(ªôâ“
+dsquid:S2259"JNullPointerException might be thrown as 'getRoomFromName' is nullable here(üŠÂæøÿÿÿÿ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(°ß“Ø
+_squid:S2259"JNullPointerException might be thrown as 'getRoomFromName' is nullable here(Âƒë
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(Ù‹äŞ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(Å¢¸Æ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(Î¤ûÿÿÿÿ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(£ä£
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(—§ü
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(æîªÆ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(—§ü
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(ì¸™Õşÿÿÿÿ
+_squid:S2259"JNullPointerException might be thrown as 'getRoomFromName' is nullable here(¹çä¶
+_squid:S2259"JNullPointerException might be thrown as 'getRoomFromName' is nullable here(èÿ³
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(Ÿ«ˆúÿÿÿÿÿ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(øŒ¼Æ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(¥›éôıÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(‘Ã–¸ıÿÿÿÿ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(Ä·™¡
+dsquid:S2259"JNullPointerException might be thrown as 'getRoomFromName' is nullable here(Ç€´ùÿÿÿÿ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(¶ºÒ
+ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(µ±Øóıÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(¸¡ŠÜıÿÿÿÿ
+gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(Â¾˜Ü
+dsquid:S2259"JNullPointerException might be thrown as 'getRoomFromName' is nullable here(ç‹–ıÿÿÿÿ
+_squid:S2259"JNullPointerException might be thrown as 'getRoomFromName' is nullable here(—‘Ï†
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(íÀñØ
+:squid:S1166"%Either log or rethrow this exception.(ï­£Ä
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(¸¡ŠÜıÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(¸¡ŠÜıÿÿÿÿ
+:squid:S1166"%Either log or rethrow this exception.(œ›¿Ä
+Ÿ%squid:RedundantThrowsDeclarationCheck"kRemove the declaration of thrown exception 'java.util.InputMismatchException' which is a runtime exception.( Şô…ûÿÿÿÿ
+N
+squid:S106";Replace this usage of System.out or System.err by a logger.(ÑòÛO
+dsquid:S2259"JNullPointerException might be thrown as 'getRoomFromName' is nullable here(Ó”´®üÿÿÿÿ

@@ -1,5 +1,5 @@
 Any input in the main method/main menu that was not an integer would cause the program to crash.
-    - Input now has to be an integer that is 1-7
+    - Input now has to be an integer that is 1-8
 If a room was not in the room list when calling findRoomIndex, the program would crash
     - I added error checking so that it returns -1 if the list is empty
     - also returns -1 if the index equals the size of room list

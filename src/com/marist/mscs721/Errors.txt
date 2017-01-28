@@ -1,15 +1,14 @@
-Any input in the main method that was not an integer would cause the program to crash.
+Any input in the main method/main menu that was not an integer would cause the program to crash.
     - Input now has to be an integer that is 1-7
 If a room was not in the room list when calling findRoomIndex, the program would crash
     - I added error checking so that it returns -1 if the list is empty
     - also returns -1 if the index equals the size of room list
 If you added a room with a name that had spaces, it would cause unwanted input.
     - I changed keyboard.next to keyboard.nextLine
-You could make a room capacity a non integer value
-    - forced integer input for room capacity
+You could make the room capacity a non integer value
+    - Now forces integer input for room capacity
 If you tried to remove a room that did not exist, it would crash
-    - error checked to make sure that the room exists before it is removed
+    - error checks to make sure that the room exists before it is removed
 If the input for the timestamp had the wrong format, the program would crash
     - added error checking to make sure the timestamp format is correct before continuing
-Made it so you couldn't have a schedule conflict
 Made it so if getRoomFromName doesn't find a room, it returns null

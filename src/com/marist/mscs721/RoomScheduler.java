@@ -16,8 +16,6 @@ import java.util.Scanner;
  * schedule a room, list the schedule, list the rooms, export the rooms and meetings to JSON, and import the rooms
  * and meetings from JSON.
  *
- * This allows a user to create rooms and then create meetings for those rooms.
- *
  * @author Tom Ginader
  * @since 2017-01-26
  */
@@ -25,7 +23,7 @@ public class RoomScheduler {
   protected static Scanner keyboard = new Scanner(System.in);
 
   /**
-   * Main method for the program. This is where the main menu is called, and the user is prompted to enter a number
+   * Main method for the class. This is where the main menu is called, and the user is prompted to enter a number
    * value that corresponds to one of the methods described above. After a number is entered, it then calls that
    * specific function that takes a list of rooms as a parameter. This is also where the list of rooms is created.
    */
@@ -64,7 +62,7 @@ public class RoomScheduler {
   }
 
   /**
-   * This method lists the schedules for a specified room. It called getRoomName and the user is prompted to enter the
+   * This method lists the schedules for a specified room. It calls getRoomName and the user is prompted to enter the
    * room number for an existing room in the room list. The schedule for that room is then displayed.
    *
    * @param  roomList  the list of rooms that have been created
@@ -101,6 +99,7 @@ public class RoomScheduler {
     System.out.println("  7 - Import from JSON");
     System.out.println("Enter your selection: ");
 
+    // Forces integer input
     try
     {
       selection = keyboard.nextInt();
@@ -155,11 +154,12 @@ public class RoomScheduler {
    * the list.
    *
    * @param  roomList  the list of rooms that have been created
-   * @return  String    an string that states the room was removed successfully.
+   * @return  String    a string that states the room was removed successfully.
    */
   protected static String removeRoom(ArrayList<Room> roomList) {
     System.out.println("Remove a room:");
 
+    // Checks if room exists
     if(findRoomIndex(roomList, getRoomName()) == -1){
       return "";
     }
@@ -194,11 +194,11 @@ public class RoomScheduler {
    * for a start date and time, and an end date and time. It then saves the dates and times as a Timestamp for the start
    * and end dates/times.
    *
-   * It then checks to see if there is any schedule conflict with an existing meeting. If there is, then the method is
-   * called again and the user is asked to enter different meeting times.
+   * It then checks to see if there is any schedule conflict with an existing meeting. If there is, then the method
+   * returns an empty string.
    *
-   * If there is no schedule conflict, then it prompts the user for a subject for the meeting. It then retrieves the
-   * room, creates the meeting, and adds the meeting to the room.
+   * If there is no schedule conflict, then it prompts the user for a subject for the meeting. It then creates the
+   * meeting, and adds the meeting to the room.
    *
    * @param  roomList  the list of rooms that have been created
    * @return  String    an empty string
@@ -225,8 +225,7 @@ public class RoomScheduler {
     String endTime = keyboard.nextLine();
     endTime = endTime + ":00.0";
 
-
-
+    // Checks if user input matches proper Timestamp format
     SimpleDateFormat format = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSSSS");
     try{
       format.parse(startDate + " " + startTime);
@@ -239,8 +238,7 @@ public class RoomScheduler {
 
     Timestamp startTimestamp = Timestamp.valueOf(startDate + " " + startTime);
 
-
-
+    // Same as above but for endTimestamp
     try{
       format.parse(endDate + " " + endTime);
     }
@@ -256,8 +254,6 @@ public class RoomScheduler {
      * an existing meeting, checks if a meeting starts before and ends after an existing meeting, checks if a start time
      * is the same start time as an existing meeting, and checks if the end time is the same as the end time of
      * an existing meeting.
-     *
-     * If this condition is met, it calls the function again and prompts the user to type a different meeting time.
      */
     if(!roomList.isEmpty()) {
       for (int i = 0; i < roomList.size(); i++) {
@@ -287,7 +283,7 @@ public class RoomScheduler {
   }
 
   /**
-   * This method lists allows the user to export the room list to JSON so that they can saved the room list for a later
+   * This method allows the user to export the room list to JSON so that they can save the room list for a later
    * time. It uses gson to convert the roomlist into JSON, and then saves it to a file called "file.json" and stores it
    * in the RoomScheduler folder.
    *
@@ -345,6 +341,7 @@ public class RoomScheduler {
    * @return  Room    the room that was found in the room list
    */
   protected static Room getRoomFromName(ArrayList<Room> roomList, String name) {
+    // Checks if room exists in roomList
     if(findRoomIndex(roomList,name) == -1){
       return null;
     }
@@ -376,6 +373,7 @@ public class RoomScheduler {
       roomIndex++;
     }
 
+    // If no room name matches the rooms in the room list, it returns a -1
     if(roomIndex >= roomList.size()){
       System.out.println("There are no rooms with that name.");
       return -1;

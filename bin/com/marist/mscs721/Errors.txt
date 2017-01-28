@@ -1,1 +1,6 @@
-Had to add keyboard.newLine for line 121, or else I could not enter a subject when I went to schedule a meeting
+Any input in the main method that was not an integer would cause the program to crash.
+    - Input now has to be an integer that is 1-7
+If a room was not in the room list when calling findRoomIndex, the program would crash
+    - I added error checking for an empty list and if index was the same as roomList.size
+If you added a room with a name that had spaces, it would cause unwanted input.
+    - I changed keyboard.next to keyboard.nextLine

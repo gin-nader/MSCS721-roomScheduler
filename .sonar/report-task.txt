@@ -1,0 +1,5 @@
+projectKey=room:scheduler
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/room:scheduler
+ceTaskId=AVoaLuF_Wj44QYCg4t-Y
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVoaLuF_Wj44QYCg4t-Y

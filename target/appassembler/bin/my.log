@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2017-02-11T15:44:49</date>
+  <millis>1486845889107</millis>
+  <sequence>0</sequence>
+  <logger>InfoLogging</logger>
+  <level>INFO</level>
+  <class>com.marist.mscs721.RoomScheduler</class>
+  <method>importFromJson</method>
+  <thread>1</thread>
+  <message>IOException</message>
+  <exception>
+    <message>java.io.FileNotFoundException: file.json (The system cannot find the file specified)</message>
+    <frame>
+      <class>java.io.FileInputStream</class>
+      <method>open0</method>
+    </frame>
+    <frame>
+      <class>java.io.FileInputStream</class>
+      <method>open</method>
+    </frame>
+    <frame>
+      <class>java.io.FileInputStream</class>
+      <method>&lt;init&gt;</method>
+    </frame>
+    <frame>
+      <class>java.io.FileInputStream</class>
+      <method>&lt;init&gt;</method>
+    </frame>
+    <frame>
+      <class>java.io.FileReader</class>
+      <method>&lt;init&gt;</method>
+    </frame>
+    <frame>
+      <class>com.marist.mscs721.RoomScheduler</class>
+      <method>importFromJson</method>
+      <line>349</line>
+    </frame>
+    <frame>
+      <class>com.marist.mscs721.RoomScheduler</class>
+      <method>main</method>
+      <line>65</line>
+    </frame>
+  </exception>
+</record>

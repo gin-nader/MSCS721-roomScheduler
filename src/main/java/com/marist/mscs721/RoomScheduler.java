@@ -26,6 +26,7 @@ public class RoomScheduler {
   static final String ERR_MSG1 = "Integers only, please. Try again.";
   static final String LOG_FILE = "my.log";
   private static Logger LOGGER = Logger.getLogger("InfoLogging");
+  static boolean debugMode = false;
 
   private RoomScheduler() throws IOException {
     throw new IllegalAccessError("Utility class");
@@ -37,6 +38,9 @@ public class RoomScheduler {
    * specific function that takes a list of rooms as a parameter. This is also where the list of rooms is created.
    */
   public static void main(String[] args) throws IOException {
+    LOGGER.setUseParentHandlers(false);
+    FileHandler fileHandler = new FileHandler(LOG_FILE);
+    LOGGER.addHandler(fileHandler);
     Boolean end = false;
     ArrayList<Room> rooms = new ArrayList<Room>();
 
@@ -125,9 +129,6 @@ public class RoomScheduler {
     try {
       selection = keyboard.nextInt();
     } catch (InputMismatchException exception) {
-      LOGGER.setUseParentHandlers(false);
-      FileHandler fileHandler = new FileHandler(LOG_FILE);
-      LOGGER.addHandler(fileHandler);
       LOGGER.log(Level.INFO, ERR_MSG1, exception);
       System.out.println(ERR_MSG1);
       keyboard.nextLine();
@@ -158,9 +159,6 @@ public class RoomScheduler {
     try {
       capacity = keyboard.nextInt();
     } catch (InputMismatchException exception) {
-      LOGGER.setUseParentHandlers(false);
-      FileHandler fileHandler = new FileHandler(LOG_FILE);
-      LOGGER.addHandler(fileHandler);
       LOGGER.log(Level.INFO, ERR_MSG1, exception);
       System.out.println(ERR_MSG1);
       keyboard.nextLine();
@@ -320,17 +318,15 @@ public class RoomScheduler {
     Gson gson = new Gson();
 
     String json = gson.toJson(roomList);
-    System.out.println(json);
+    if(debugMode = true) {
+      System.out.println(json);
+    }
 
     try (FileWriter writer = new FileWriter("file.json")) {
-
       gson.toJson(roomList, writer);
-
     } catch (IOException e) {
-      LOGGER.setUseParentHandlers(false);
-      FileHandler fileHandler = new FileHandler(LOG_FILE);
-      LOGGER.addHandler(fileHandler);
-      LOGGER.log(Level.INFO, "IOException", e);
+      LOGGER.log(Level.SEVERE, "IOException", e);
+      return "Error related to JSON file has occurred.";
     }
 
     return "Successfully exported objects to JSON!";
@@ -347,18 +343,14 @@ public class RoomScheduler {
     Gson gson = new Gson();
 
     try (Reader reader = new FileReader("file.json")) {
-
       Room[] roomArr = gson.fromJson(reader, Room[].class);
 
       for (int i = 0; i < roomArr.length; i++) {
         roomList.add(roomArr[i]);
       }
-
     } catch (IOException e) {
-      LOGGER.setUseParentHandlers(false);
-      FileHandler fileHandler = new FileHandler(LOG_FILE);
-      LOGGER.addHandler(fileHandler);
-      LOGGER.log(Level.INFO, "IOException", e);
+      LOGGER.log(Level.SEVERE, "IOException", e);
+      return "Error related to JSON file has occurred.";
     }
 
     return "Successfully imported JSON to objects!";

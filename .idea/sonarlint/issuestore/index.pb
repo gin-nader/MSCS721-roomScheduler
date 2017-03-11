@@ -15,3 +15,8 @@ A
 RoomScheduler.iml,5\7\57e0bd73c506d658a6fb209b19e40b5db9de1465
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+:
+
+.classpath,3\5\354079a72b91a4280407c16a36f47d1986fd85a5
+@
+user-actions.log,3\b\3b7a7bdf05c7a53d9a8e16adee743fa27063129b

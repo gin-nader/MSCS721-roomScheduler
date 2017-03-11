@@ -1,0 +1,44 @@
+2017-03-03 18:52:22 INFO  RoomScheduler:143 - 1
+2017-03-03 18:52:24 INFO  RoomScheduler:455 - Room 201
+2017-03-03 18:52:27 INFO  RoomScheduler:173 - 0
+2017-03-03 18:52:27 ERROR RoomScheduler:182 - Room capacity must be at least 5.
+2017-03-03 18:52:27 INFO  RoomScheduler:51 - 
+2017-03-03 18:52:29 INFO  RoomScheduler:143 - 1
+2017-03-03 18:52:31 INFO  RoomScheduler:455 - Room 201
+2017-03-03 18:52:33 INFO  RoomScheduler:173 - 20
+2017-03-03 18:52:33 INFO  RoomScheduler:51 - Room 'Room 201' added successfully!
+2017-03-03 18:52:35 INFO  RoomScheduler:143 - 5
+2017-03-03 18:52:35 INFO  RoomScheduler:71 - 1 Room(s)
+2017-03-03 18:52:37 INFO  RoomScheduler:143 - 6
+2017-03-03 18:52:37 DEBUG RoomScheduler:354 - [{"name":"Room 201","capacity":20,"meetings":[]}]
+2017-03-03 18:52:37 INFO  RoomScheduler:76 - Successfully exported objects to JSON!
+2017-03-03 18:52:37 INFO  RoomScheduler:143 - 7
+2017-03-03 18:52:37 INFO  RoomScheduler:81 - Successfully imported JSON to objects!
+2017-03-03 18:52:40 INFO  RoomScheduler:143 - 5
+2017-03-03 18:52:40 INFO  RoomScheduler:71 - 2 Room(s)
+2017-03-03 18:52:43 INFO  RoomScheduler:143 - 2
+2017-03-03 18:52:46 INFO  RoomScheduler:455 - Room 201
+2017-03-03 18:52:46 INFO  RoomScheduler:56 - Room removed successfully!
+2017-03-03 18:52:48 INFO  RoomScheduler:143 - 2
+2017-03-03 18:52:49 INFO  RoomScheduler:455 - asd
+2017-03-03 18:52:49 ERROR RoomScheduler:435 - There are no rooms with that name.
+2017-03-03 18:52:49 INFO  RoomScheduler:56 - 
+2017-03-03 18:52:58 INFO  RoomScheduler:143 - 3
+2017-03-03 18:53:00 INFO  RoomScheduler:455 - Room 201
+2017-03-03 18:53:03 INFO  RoomScheduler:259 - 2017-03-03
+2017-03-03 18:53:05 INFO  RoomScheduler:262 - 3:00
+2017-03-03 18:53:07 INFO  RoomScheduler:267 - 2017-03-03
+2017-03-03 18:53:08 INFO  RoomScheduler:270 - 4:00
+2017-03-03 18:53:11 INFO  RoomScheduler:331 - MSCS 721
+2017-03-03 18:53:11 INFO  RoomScheduler:61 - Successfully scheduled meeting!
+
+2017-03-03 18:53:27 INFO  RoomScheduler:143 - 3
+2017-03-03 18:53:29 INFO  RoomScheduler:455 - Room 201
+2017-03-03 18:53:32 INFO  RoomScheduler:259 - 2017-03-03
+2017-03-03 18:53:34 INFO  RoomScheduler:262 - 3:00
+2017-03-03 18:53:36 INFO  RoomScheduler:267 - Room 201
+2017-03-03 18:53:40 INFO  RoomScheduler:270 - 4:00
+2017-03-03 18:53:40 ERROR RoomScheduler:290 - java.text.ParseException: Unparseable date: "Room 201 4:00:00.0"
+2017-03-03 18:53:40 INFO  RoomScheduler:61 - 
+2017-03-03 18:53:46 INFO  RoomScheduler:143 - 8
+2017-03-03 18:53:46 INFO  RoomScheduler:85 - User quit program

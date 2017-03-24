@@ -29,10 +29,6 @@ public class RoomScheduler {
   static Logger logger = Logger.getLogger(RoomScheduler.class);
   static boolean debugMode = true;
 
-  private RoomScheduler() throws IOException {
-    throw new IllegalAccessError("Utility class");
-  }
-
   /**
    * Main method for the class. This is where the main menu is called, and the user is prompted to enter a number
    * value that corresponds to one of the methods described above. After a number is entered, it then calls that
@@ -346,7 +342,7 @@ public class RoomScheduler {
    * @param roomList the list of rooms that have been created
    * @return String  a string that displays that the objects were successfully exported to JSON
    */
-  protected static String exportToJson(ArrayList<Room> roomList) throws IOException {
+  public static String exportToJson(ArrayList<Room> roomList) throws IOException {
     Gson gson = new Gson();
 
     String json = gson.toJson(roomList);
@@ -372,7 +368,7 @@ public class RoomScheduler {
    * @param roomList the list of rooms that have been created
    * @return String  a string that displays that the import was successful
    */
-  protected static String importFromJson(ArrayList<Room> roomList) throws IOException {
+  public static String importFromJson(ArrayList<Room> roomList) throws IOException {
     Gson gson = new Gson();
 
     try (Reader reader = new FileReader("file.json")) {

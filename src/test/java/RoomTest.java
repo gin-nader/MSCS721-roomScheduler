@@ -81,4 +81,24 @@ public class RoomTest {
     assertEquals(testRoom.getMeetings().get(1), testMeeting1);
     assertEquals(testRoom.getMeetings().get(2), testMeeting2);
   }
+
+  /**
+   * This method tests the setCapacity method by setting the capacity to the min value and checking that it returns
+   * that same value.
+   */
+  @Test
+  public void testMinCapacity(){
+    testRoom.setCapacity(5);
+    assertEquals(testRoom.getCapacity(), 5);
+  }
+
+  /**
+   * This method tests the setCapacity method by setting the capacity to the min value minus one. Then it checks to see
+   * if the capacity returns -1 which is what happens when capacity gets set to an invalid integer.
+   */
+  @Test
+  public void test1BelowMinCapacity(){
+    testRoom.setCapacity(4);
+    assertEquals(testRoom.getCapacity(), -1);
+  }
 }

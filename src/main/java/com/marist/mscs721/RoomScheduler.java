@@ -193,7 +193,7 @@ public class RoomScheduler {
    * @param roomList the list of rooms that have been created
    * @return String    a string that states the room was removed successfully.
    */
-  protected static String removeRoom(ArrayList<Room> roomList) {
+  public static String removeRoom(ArrayList<Room> roomList) {
     System.out.println("Remove a room:");
     String roomName = getRoomName();
 

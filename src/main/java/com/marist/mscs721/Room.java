@@ -32,7 +32,12 @@ public class Room {
 	}
 
 	public void setCapacity(int capacity) {
+		if(capacity >= 5) {
 			this.capacity = capacity;
+		}
+		else {
+			this.capacity = -1;
+		}
 	}
 
 	public ArrayList<Meeting> getMeetings() {

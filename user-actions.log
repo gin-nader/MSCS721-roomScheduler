@@ -46,3 +46,25 @@
 2017-03-24 11:39:31 DEBUG RoomScheduler:350 - [{"name":"Test","capacity":20,"meetings":[]}]
 2017-03-24 11:40:22 DEBUG RoomScheduler:350 - [{"name":"Test","capacity":20,"meetings":[]}]
 2017-03-24 11:40:22 DEBUG RoomScheduler:350 - [{"name":"Test","capacity":20,"meetings":[]}]
+2017-03-24 19:18:45 INFO  RoomScheduler:139 - 7
+2017-03-24 19:18:46 INFO  RoomScheduler:77 - Successfully imported JSON to objects!
+2017-03-24 19:18:54 INFO  RoomScheduler:139 - 5
+2017-03-24 19:18:54 INFO  RoomScheduler:67 - 1 Room(s)
+2017-03-24 19:18:56 INFO  RoomScheduler:139 - 2
+2017-03-24 19:18:57 INFO  RoomScheduler:451 - Test
+2017-03-24 19:18:57 INFO  RoomScheduler:52 - Room removed successfully!
+2017-03-24 19:19:01 INFO  RoomScheduler:139 - 7
+2017-03-24 19:19:01 INFO  RoomScheduler:77 - Successfully imported JSON to objects!
+2017-03-24 19:19:04 INFO  RoomScheduler:139 - 6
+2017-03-24 19:19:04 DEBUG RoomScheduler:350 - [{"name":"Test","capacity":20,"meetings":[]}]
+2017-03-24 19:19:04 INFO  RoomScheduler:72 - Successfully exported objects to JSON!
+2017-03-24 19:19:14 INFO  RoomScheduler:139 - 3
+2017-03-24 19:19:15 INFO  RoomScheduler:451 - Test
+2017-03-24 19:19:20 INFO  RoomScheduler:255 - 2016-02-01
+2017-03-24 19:19:22 INFO  RoomScheduler:258 - 3:00
+2017-03-24 19:19:31 INFO  RoomScheduler:263 - 2016-03-01
+2017-03-24 19:19:33 INFO  RoomScheduler:266 - 4:00
+2017-03-24 19:19:35 INFO  RoomScheduler:327 - test
+2017-03-24 19:19:35 INFO  RoomScheduler:57 - Successfully scheduled meeting!
+
+2017-03-25 16:36:38 DEBUG RoomScheduler:350 - [{"name":"Test","capacity":20,"meetings":[]}]

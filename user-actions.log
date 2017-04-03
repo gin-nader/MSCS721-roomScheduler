@@ -68,3 +68,104 @@
 2017-03-24 19:19:35 INFO  RoomScheduler:57 - Successfully scheduled meeting!
 
 2017-03-25 16:36:38 DEBUG RoomScheduler:350 - [{"name":"Test","capacity":20,"meetings":[]}]
+2017-04-03 10:18:16 INFO  RoomScheduler:139 - 1
+2017-04-03 10:18:18 INFO  RoomScheduler:460 - Test
+2017-04-03 10:18:21 INFO  RoomScheduler:169 - 20
+2017-04-03 10:18:21 INFO  RoomScheduler:185 - 
+2017-04-03 10:20:43 INFO  RoomScheduler:139 - 1
+2017-04-03 10:20:45 INFO  RoomScheduler:465 - test
+2017-04-03 10:20:47 INFO  RoomScheduler:171 - 20
+2017-04-03 10:20:50 INFO  RoomScheduler:187 - testbuilding
+2017-04-03 10:21:20 INFO  RoomScheduler:139 - 1
+2017-04-03 10:21:23 INFO  RoomScheduler:462 - test
+2017-04-03 10:21:24 INFO  RoomScheduler:171 - 20
+2017-04-03 10:21:26 INFO  RoomScheduler:187 - testbuilding
+2017-04-03 10:21:29 INFO  RoomScheduler:191 - testlocation
+2017-04-03 10:21:29 INFO  RoomScheduler:47 - Room 'test' added successfully!
+2017-04-03 10:21:34 INFO  RoomScheduler:139 - 5
+2017-04-03 10:21:34 INFO  RoomScheduler:67 - 1 Room(s)
+2017-04-03 10:23:31 INFO  RoomScheduler:139 - 1
+2017-04-03 10:23:33 INFO  RoomScheduler:462 - test
+2017-04-03 10:23:34 INFO  RoomScheduler:171 - 20
+2017-04-03 10:23:36 INFO  RoomScheduler:187 - testbuild
+2017-04-03 10:23:38 INFO  RoomScheduler:191 - testloc
+2017-04-03 10:23:38 INFO  RoomScheduler:47 - Room 'test' added successfully!
+2017-04-03 10:23:42 INFO  RoomScheduler:139 - 5
+2017-04-03 10:23:42 INFO  RoomScheduler:67 - 1 Room(s)
+2017-04-03 10:24:45 INFO  RoomScheduler:139 - 1
+2017-04-03 10:24:47 INFO  RoomScheduler:463 - test
+2017-04-03 10:24:48 INFO  RoomScheduler:171 - 20
+2017-04-03 10:24:49 INFO  RoomScheduler:187 - testbuild
+2017-04-03 10:24:51 INFO  RoomScheduler:191 - testloc
+2017-04-03 10:24:51 INFO  RoomScheduler:47 - Room 'test' added successfully!
+2017-04-03 10:24:53 INFO  RoomScheduler:139 - 4
+2017-04-03 10:24:55 INFO  RoomScheduler:463 - test
+2017-04-03 10:24:55 INFO  RoomScheduler:62 - 
+2017-04-03 10:25:05 INFO  RoomScheduler:139 - 5
+2017-04-03 10:25:05 INFO  RoomScheduler:67 - 1 Room(s)
+2017-04-03 10:25:46 INFO  RoomScheduler:139 - 3
+2017-04-03 10:25:48 INFO  RoomScheduler:463 - test
+2017-04-03 10:25:55 INFO  RoomScheduler:267 - 2017-02-03
+2017-04-03 10:25:57 INFO  RoomScheduler:270 - 4:00
+2017-04-03 10:26:03 INFO  RoomScheduler:275 - 2017-02-03
+2017-04-03 10:26:07 INFO  RoomScheduler:278 - 5:00
+2017-04-03 10:26:09 INFO  RoomScheduler:339 - test
+2017-04-03 10:26:09 INFO  RoomScheduler:57 - Successfully scheduled meeting!
+
+2017-04-03 10:26:12 INFO  RoomScheduler:139 - 4
+2017-04-03 10:26:14 INFO  RoomScheduler:463 - test
+2017-04-03 10:26:14 INFO  RoomScheduler:62 - 
+2017-04-03 10:53:20 INFO  RoomScheduler:137 - 7
+2017-04-03 10:53:20 INFO  RoomScheduler:75 - Successfully imported JSON to objects!
+2017-04-03 10:53:23 INFO  RoomScheduler:137 - 5
+2017-04-03 10:53:23 INFO  RoomScheduler:65 - 1 Room(s)
+2017-04-03 10:53:30 INFO  RoomScheduler:137 - 1
+2017-04-03 10:53:33 INFO  RoomScheduler:469 - Test
+2017-04-03 10:53:34 INFO  RoomScheduler:169 - 20
+2017-04-03 10:53:37 INFO  RoomScheduler:185 - test building
+2017-04-03 10:53:39 INFO  RoomScheduler:189 - test location
+2017-04-03 10:53:39 INFO  RoomScheduler:45 - Room 'Test' added successfully!
+2017-04-03 10:53:42 INFO  RoomScheduler:137 - 6
+2017-04-03 10:53:42 DEBUG RoomScheduler:368 - [{"name":"Test","capacity":20,"meetings":[]},{"name":"Test","capacity":20,"meetings":[],"building":"test building","location":"test location"}]
+2017-04-03 10:53:42 INFO  RoomScheduler:70 - Successfully exported objects to JSON!
+2017-04-03 10:53:54 INFO  RoomScheduler:137 - 3
+2017-04-03 10:53:57 INFO  RoomScheduler:469 - Test
+2017-04-03 10:54:01 INFO  RoomScheduler:265 - 2016-02-03
+2017-04-03 10:54:05 INFO  RoomScheduler:268 - 3:00
+2017-04-03 10:54:10 INFO  RoomScheduler:273 - 2016-02-03
+2017-04-03 10:54:12 INFO  RoomScheduler:276 - 4:00
+2017-04-03 10:54:15 INFO  RoomScheduler:345 - test subject
+2017-04-03 10:54:15 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-03 10:56:03 INFO  RoomScheduler:137 - 7
+2017-04-03 10:56:03 INFO  RoomScheduler:75 - Successfully imported JSON to objects!
+2017-04-03 10:56:05 INFO  RoomScheduler:137 - 3
+2017-04-03 10:56:06 INFO  RoomScheduler:470 - Test
+2017-04-03 10:56:09 INFO  RoomScheduler:265 - 2016-02-03
+2017-04-03 10:56:11 INFO  RoomScheduler:268 - 3:00
+2017-04-03 10:56:16 INFO  RoomScheduler:273 - 2016-02-03
+2017-04-03 10:56:18 INFO  RoomScheduler:276 - 4:00
+2017-04-03 10:56:21 INFO  RoomScheduler:346 - test subject
+2017-04-03 10:56:21 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-03 10:57:33 INFO  RoomScheduler:137 - 7
+2017-04-03 10:57:33 INFO  RoomScheduler:75 - Successfully imported JSON to objects!
+2017-04-03 10:57:35 INFO  RoomScheduler:137 - 3
+2017-04-03 10:57:37 INFO  RoomScheduler:470 - Test
+2017-04-03 10:57:39 INFO  RoomScheduler:265 - 2016-02-03
+2017-04-03 10:57:42 INFO  RoomScheduler:268 - 3:00
+2017-04-03 10:57:49 INFO  RoomScheduler:273 - 2016-02-03
+2017-04-03 10:57:51 INFO  RoomScheduler:276 - 4:00
+2017-04-03 10:57:55 INFO  RoomScheduler:346 - test subject
+2017-04-03 10:57:55 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-03 10:58:50 INFO  RoomScheduler:137 - 7
+2017-04-03 10:58:50 INFO  RoomScheduler:75 - Successfully imported JSON to objects!
+2017-04-03 10:58:53 INFO  RoomScheduler:137 - 3
+2017-04-03 10:58:54 INFO  RoomScheduler:472 - Test
+2017-04-03 10:58:59 INFO  RoomScheduler:265 - 2016-03-04
+2017-04-03 10:59:00 INFO  RoomScheduler:268 - 3:00
+2017-04-03 10:59:05 INFO  RoomScheduler:273 - 2016-03-04
+2017-04-03 10:59:07 INFO  RoomScheduler:276 - 4:00
+2017-04-03 10:59:07 ERROR RoomScheduler:309 - Sorry, a meeting cannot be created in the past
+2017-04-03 10:59:07 INFO  RoomScheduler:55 - 

@@ -8,9 +8,7 @@ import java.io.*;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
 
 
 /**
@@ -166,6 +164,8 @@ public class RoomScheduler {
     // Forces input to be an integer
     try {
       capacity = keyboard.nextInt();
+      // Eats newline char
+      keyboard.nextLine();
       logger.info(capacity);
     } catch (InputMismatchException exception) {
       logger.error(exception);
@@ -179,7 +179,16 @@ public class RoomScheduler {
       System.out.println("Room capacity must be at least 5.");
       return "";
     }
-    Room newRoom = new Room(name, capacity);
+
+    System.out.println("Enter building name: ");
+    String building = keyboard.nextLine();
+    logger.info(building);
+
+    System.out.println("Enter location name: ");
+    String location = keyboard.nextLine();
+    logger.info(location);
+
+    Room newRoom = new Room(name, capacity, building, location);
     roomList.add(newRoom);
 
     return "Room '" + newRoom.getName() + "' added successfully!";
@@ -216,11 +225,12 @@ public class RoomScheduler {
    * @return String    a string that displays how many rooms are in the room list
    */
   protected static String listRooms(ArrayList<Room> roomList) {
-    System.out.println("Room Name - Capacity");
+    System.out.println("Room Name  \tCapacity \tBuilding \tLocation");
     System.out.println(SEPARATOR);
 
     for (Room room : roomList) {
-      System.out.println(room.getName() + " - " + room.getCapacity());
+      System.out.println(room.getName() + "\t\t" + room.getCapacity() + "\t\t" + room.getBuilding() + "\t" +
+                                                                                          room.getLocation());
     }
 
     System.out.println(SEPARATOR);
@@ -288,6 +298,15 @@ public class RoomScheduler {
       }
 
       Timestamp endTimestamp = Timestamp.valueOf(endDate + " " + endTime);
+
+      Date date= new Date();
+      long time = date.getTime();
+      Timestamp currentTimestamp = new Timestamp(time);
+      if(currentTimestamp.after(endTimestamp) || currentTimestamp.after(startTimestamp)) {
+        System.out.println("Sorry, a meeting cannot be created in the past");
+        logger.error("Sorry, a meeting cannot be created in the past");
+        return "";
+      }
 
     /* Checks if a start time starts in the middle of an existing meeting, checks if an end time ends in the middle of
      * an existing meeting, checks if a meeting starts before and ends after an existing meeting, checks if a start time
@@ -396,7 +415,7 @@ public class RoomScheduler {
   protected static Room getRoomFromName(ArrayList<Room> roomList, String name) {
     // Checks if room exists in roomList
     if (findRoomIndex(roomList, name) == -1) {
-      return new Room("error", -1);
+      return new Room("error", -1, "N/A", "N/A");
     }
     return roomList.get(findRoomIndex(roomList, name));
   }
@@ -451,6 +470,29 @@ public class RoomScheduler {
     logger.info(selection);
 
     return selection;
+  }
+
+  protected static ArrayList<Room> roomsAvailable(Timestamp startTimestamp, Timestamp endTimestamp, ArrayList<Room> roomList){
+    ArrayList<Room> availableList = new ArrayList<>();
+    for(int i = 0; i < roomList.size(); i++){
+      if(!roomList.get(i).getMeetings().get(i).getStartTime().equals(startTimestamp) &&
+              !roomList.get(i).getMeetings().get(i).getStopTime().equals(endTimestamp)){
+        if(startTimestamp.before(roomList.get(i).getMeetings().get(i).getStartTime()) &&
+                endTimestamp.before(roomList.get(i).getMeetings().get(i).getStopTime())){
+          availableList.add(roomList.get(i));
+        } else if(startTimestamp.after(roomList.get(i).getMeetings().get(i).getStartTime()) &&
+                endTimestamp.after(roomList.get(i).getMeetings().get(i).getStopTime())){
+          availableList.add(roomList.get(i));
+        }
+      }
+    }
+    System.out.println(SEPARATOR);
+    for (int i = 0; i < availableList.size(); i++){
+      System.out.println(availableList.get(i).getName() + " Schedule");
+      System.out.println(availableList.get(i).getMeetings().toString());
+    }
+    System.out.println(SEPARATOR);
+    return availableList;
   }
 
 }

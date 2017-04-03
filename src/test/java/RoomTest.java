@@ -11,14 +11,14 @@ import static org.junit.Assert.assertEquals;
  */
 public class RoomTest {
 
-  Room testRoom = new Room("test", 30);
+  Room testRoom = new Room("test", 30, "testBuilding", "testLocation");
 
   /**
    * This method tests if the name given to testRoom is the same name as the one that gets returned by getName()
    */
   @Test
   public void testGetName(){
-    assertEquals(testRoom.getName(), "test");
+    assertEquals("test", testRoom.getName());
   }
 
   /**
@@ -26,7 +26,7 @@ public class RoomTest {
    */
   @Test
   public void testGetCapacity(){
-    assertEquals(testRoom.getCapacity(), 30);
+    assertEquals(30, testRoom.getCapacity());
   }
 
   /**
@@ -35,7 +35,7 @@ public class RoomTest {
   @Test
   public void testSetName(){
     testRoom.setName("New name");
-    assertEquals(testRoom.getName(), "New name");
+    assertEquals("New name", testRoom.getName());
   }
 
   /**
@@ -44,7 +44,7 @@ public class RoomTest {
   @Test
   public void testSetCapacity(){
     testRoom.setCapacity(10);
-    assertEquals(testRoom.getCapacity(), 10);
+    assertEquals(10, testRoom.getCapacity());
   }
 
   /**
@@ -56,7 +56,7 @@ public class RoomTest {
     Meeting testMeeting = new Meeting(Timestamp.valueOf("2017-02-19 3:00:00.0"), Timestamp.valueOf("2017-02-19 4:00:00.0"),
         "MSCS721");
     testRoom.addMeeting(testMeeting);
-    assertEquals(testRoom.getMeetings().get(0), testMeeting);
+    assertEquals(testMeeting, testRoom.getMeetings().get(0));
   }
 
   /**
@@ -77,9 +77,9 @@ public class RoomTest {
     meetings.add(testMeeting2);
     testRoom.setMeetings(meetings);
 
-    assertEquals(testRoom.getMeetings().get(0), testMeeting0);
-    assertEquals(testRoom.getMeetings().get(1), testMeeting1);
-    assertEquals(testRoom.getMeetings().get(2), testMeeting2);
+    assertEquals(testMeeting0, testRoom.getMeetings().get(0));
+    assertEquals(testMeeting1, testRoom.getMeetings().get(1));
+    assertEquals(testMeeting2, testRoom.getMeetings().get(2));
   }
 
   /**
@@ -89,7 +89,7 @@ public class RoomTest {
   @Test
   public void testMinCapacity(){
     testRoom.setCapacity(5);
-    assertEquals(testRoom.getCapacity(), 5);
+    assertEquals(5, testRoom.getCapacity());
   }
 
   /**
@@ -99,6 +99,40 @@ public class RoomTest {
   @Test
   public void test1BelowMinCapacity(){
     testRoom.setCapacity(4);
-    assertEquals(testRoom.getCapacity(), -1);
+    assertEquals(-1, testRoom.getCapacity());
+  }
+
+  /**
+   * This method tests if the setBuilding method sets a new building name to the Room class.
+   */
+  @Test
+  public void testSetBuilding(){
+    testRoom.setBuilding("newBuilding");
+    assertEquals("newBuilding", testRoom.getBuilding());
+  }
+
+  /**
+   * This method tests that the getBuilding method returns the original building name for the Room class.
+   */
+  @Test
+  public void testGetBuilding(){
+    assertEquals("testBuilding", testRoom.getBuilding());
+  }
+
+  /**
+   * This method tests if the setLocation method sets a new location name to the Room class.
+   */
+  @Test
+  public void testSetLocation(){
+    testRoom.setLocation("newLocation");
+    assertEquals("newLocation", testRoom.getLocation());
+  }
+
+  /**
+   * This method tests that the getLocation method returns the original location name for the Room class.
+   */
+  @Test
+  public void testGetLocation(){
+    assertEquals("testLocation", testRoom.getLocation());
   }
 }

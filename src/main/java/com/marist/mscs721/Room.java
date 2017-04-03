@@ -7,11 +7,15 @@ public class Room {
 	private String name;
 	private int capacity;
 	private ArrayList<Meeting> meetings;
+	private String building;
+	private String location;
 	
 	
-	public Room(String newName, int newCapacity) {
+	public Room(String newName, int newCapacity, String newBuilding, String newLocation) {
 		setName(newName);
 		setCapacity(newCapacity);
+		setBuilding(newBuilding);
+		setLocation(newLocation);
 		setMeetings(new ArrayList<Meeting>());
 	}
 
@@ -47,5 +51,20 @@ public class Room {
 	public void setMeetings(ArrayList<Meeting> meetings) {
 		this.meetings = meetings;
 	}
-	
+
+	public void setBuilding(String building){
+		this.building = building;
+	}
+
+	public String getBuilding(){
+		return building;
+	}
+
+	public void setLocation(String location){
+		this.location = location;
+	}
+
+	public String getLocation(){
+		return location;
+	}
 }

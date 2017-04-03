@@ -169,3 +169,93 @@
 2017-04-03 10:59:07 INFO  RoomScheduler:276 - 4:00
 2017-04-03 10:59:07 ERROR RoomScheduler:309 - Sorry, a meeting cannot be created in the past
 2017-04-03 10:59:07 INFO  RoomScheduler:55 - 
+2017-04-03 11:48:55 INFO  RoomScheduler:137 - 3
+2017-04-03 11:48:55 INFO  RoomScheduler:260 - 
+2017-04-03 11:49:33 INFO  RoomScheduler:137 - 7
+2017-04-03 11:49:33 INFO  RoomScheduler:75 - Successfully imported JSON to objects!
+2017-04-03 11:49:36 INFO  RoomScheduler:137 - 3
+2017-04-03 11:49:43 INFO  RoomScheduler:262 - 2017-05-04
+2017-04-03 11:49:45 INFO  RoomScheduler:265 - 3:00
+2017-04-03 11:49:50 INFO  RoomScheduler:270 - 2017-05-04
+2017-04-03 11:49:52 INFO  RoomScheduler:273 - 4:00
+2017-04-03 11:49:52 INFO  RoomScheduler:309 - Would you like to see a list of available rooms? Y/N
+2017-04-03 12:40:59 INFO  RoomScheduler:137 - 7
+2017-04-03 12:40:59 INFO  RoomScheduler:75 - Successfully imported JSON to objects!
+2017-04-03 12:41:00 INFO  RoomScheduler:137 - 5
+2017-04-03 12:41:00 INFO  RoomScheduler:65 - 2 Room(s)
+2017-04-03 12:41:11 INFO  RoomScheduler:137 - 2
+2017-04-03 12:41:13 INFO  RoomScheduler:485 - Test
+2017-04-03 12:41:13 INFO  RoomScheduler:50 - Room removed successfully!
+2017-04-03 12:41:13 INFO  RoomScheduler:137 - 5
+2017-04-03 12:41:13 INFO  RoomScheduler:65 - 1 Room(s)
+2017-04-03 12:41:17 INFO  RoomScheduler:137 - 6
+2017-04-03 12:41:17 DEBUG RoomScheduler:384 - [{"name":"Test","capacity":20,"meetings":[],"building":"test building","location":"test location"}]
+2017-04-03 12:41:17 INFO  RoomScheduler:70 - Successfully exported objects to JSON!
+2017-04-03 12:41:20 INFO  RoomScheduler:137 - 3
+2017-04-03 12:41:24 INFO  RoomScheduler:262 - 2017-05-04
+2017-04-03 12:41:25 INFO  RoomScheduler:265 - 3:00
+2017-04-03 12:41:32 INFO  RoomScheduler:270 - 2017-05-04
+2017-04-03 12:41:34 INFO  RoomScheduler:273 - 4:00
+2017-04-03 12:41:34 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-03 12:41:37 INFO  RoomScheduler:312 - y
+2017-04-03 12:43:11 INFO  RoomScheduler:137 - 7
+2017-04-03 12:43:11 INFO  RoomScheduler:75 - Successfully imported JSON to objects!
+2017-04-03 12:43:15 INFO  RoomScheduler:137 - 3
+2017-04-03 12:43:19 INFO  RoomScheduler:262 - 2017-05-04
+2017-04-03 12:43:22 INFO  RoomScheduler:265 - 3:00
+2017-04-03 12:43:25 INFO  RoomScheduler:270 - 2017-05-04
+2017-04-03 12:43:27 INFO  RoomScheduler:273 - 4:00
+2017-04-03 12:43:27 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-03 12:43:29 INFO  RoomScheduler:312 - y
+2017-04-03 12:45:19 INFO  RoomScheduler:137 - 7
+2017-04-03 12:45:19 INFO  RoomScheduler:75 - Successfully imported JSON to objects!
+2017-04-03 12:45:20 INFO  RoomScheduler:137 - 3
+2017-04-03 12:45:26 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-03 12:45:28 INFO  RoomScheduler:265 - 4:00
+2017-04-03 12:45:31 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-03 12:45:33 INFO  RoomScheduler:273 - 5:00
+2017-04-03 12:45:33 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-03 12:45:35 INFO  RoomScheduler:312 - y
+2017-04-03 12:47:46 INFO  RoomScheduler:137 - 7
+2017-04-03 12:47:46 INFO  RoomScheduler:75 - Successfully imported JSON to objects!
+2017-04-03 12:47:48 INFO  RoomScheduler:137 - 3
+2017-04-03 12:47:52 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-03 12:47:56 INFO  RoomScheduler:265 - 3:00
+2017-04-03 12:48:00 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-03 12:48:02 INFO  RoomScheduler:273 - 4:00
+2017-04-03 12:48:02 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-03 12:48:03 INFO  RoomScheduler:312 - y
+2017-04-03 12:50:15 INFO  RoomScheduler:137 - 7
+2017-04-03 12:50:15 INFO  RoomScheduler:75 - Successfully imported JSON to objects!
+2017-04-03 12:50:15 INFO  RoomScheduler:137 - 3
+2017-04-03 12:50:17 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-03 12:50:17 INFO  RoomScheduler:265 - 
+2017-04-03 12:50:21 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-03 12:50:24 INFO  RoomScheduler:273 - 3:00
+2017-04-03 12:50:24 ERROR RoomScheduler:282 - java.text.ParseException: Unparseable date: "2017-04-05 :00.0"
+2017-04-03 12:50:24 INFO  RoomScheduler:55 - 
+2017-04-03 12:50:27 INFO  RoomScheduler:137 - 3
+2017-04-03 12:50:28 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-03 12:50:30 INFO  RoomScheduler:265 - 3:00
+2017-04-03 12:50:30 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-03 12:50:32 INFO  RoomScheduler:273 - 4:00
+2017-04-03 12:50:32 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-03 12:50:34 INFO  RoomScheduler:312 - n
+2017-04-03 12:50:42 INFO  RoomScheduler:487 - Test
+2017-04-03 12:50:45 INFO  RoomScheduler:363 - Test subject
+2017-04-03 12:50:45 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-03 12:52:42 INFO  RoomScheduler:137 - 3
+2017-04-03 12:52:44 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-03 12:52:47 INFO  RoomScheduler:265 - 3:00
+2017-04-03 12:52:49 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-03 12:52:55 INFO  RoomScheduler:273 - 4:00
+2017-04-03 12:52:55 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-03 12:52:57 INFO  RoomScheduler:312 - y
+2017-04-03 12:52:57 INFO  RoomScheduler:317 - All rooms are available
+2017-04-03 12:53:12 INFO  RoomScheduler:487 - Test
+2017-04-03 12:53:12 ERROR RoomScheduler:352 - Sorry, a meeting start time cannot be the same as another meeting start time
+2017-04-03 12:53:12 INFO  RoomScheduler:55 - 
+2017-04-03 12:53:36 INFO  RoomScheduler:137 - 6
+2017-04-03 12:53:36 DEBUG RoomScheduler:386 - [{"name":"Test","capacity":20,"meetings":[{"startTime":"Apr 5, 2017 3:00:00 AM","stopTime":"Apr 5, 2017 4:00:00 AM","subject":"Test subject"}],"building":"test building","location":"test location"}]
+2017-04-03 12:53:36 INFO  RoomScheduler:70 - Successfully exported objects to JSON!

@@ -1,0 +1,110 @@
+
+xsquid:S1192"cDefine a constant instead of duplicating this literal "There are no rooms with that name." 4 times.(Îæ‰
+ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(µ±Øóıÿÿÿÿ
+squid:S1319"sThe type of the "roomList" object should be an interface such as "List" rather than the implementation "ArrayList".(ãÑù³úÿÿÿÿ
+ˆsquid:S1319"sThe type of the "roomList" object should be an interface such as "List" rather than the implementation "ArrayList".(ÇÍşº
+squid:S1319"sThe type of the "roomList" object should be an interface such as "List" rather than the implementation "ArrayList".(Ê­“ÿÿÿÿÿ
+a
+squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(€¶Ñ`
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(éùÏ¦ùÿÿÿÿ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(Êú”œ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(‡ôÈ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(ƒ“ı
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(ËÛäÙ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(áÂ’ë
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(šœ€Ä
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(õÙ£ûÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(¸¡ŠÜıÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(¼¡éšüÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(¸¡ŠÜıÿÿÿÿ
+N
+squid:S106";Replace this usage of System.out or System.err by a logger.(€ür
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(íÀñØ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(¥›éôıÿÿÿÿ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(×¦ãö
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(æîªÆ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(„×ßÂùÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(‘Ã–¸ıÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(Œ±•øÿÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(Ÿ«ˆúÿÿÿÿÿ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(ÙÒ‚Â
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(÷Âş²øÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(œ«£úÿÿÿÿ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(åÂ¶ú
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(’§Œˆ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(÷Âş²øÿÿÿÿ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.( ¢»£
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(ò  ¥şÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(ö£§Øùÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(¸¡ŠÜıÿÿÿÿ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(°ß“Ø
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(¸¡ŠÜıÿÿÿÿ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(˜øë¹
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(ïİ‡ˆÿÿÿÿÿ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(Ä·™¡
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(ÿ¾ÂŒ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(ì¸™Õşÿÿÿÿ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(í†”Ñ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(ªôâ“
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(Ù‹äŞ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(¶ºÒ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(Î¤ûÿÿÿÿ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(·Óúç
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(»«ÁÆ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(Å¢¸Æ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(øŒ¼Æ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(£ä£
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(£ä£
+N
+squid:S106";Replace this usage of System.out or System.err by a logger.(ÑòÛO
+gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(Â¾˜Ü
+Nsquid:S1118":Add a private constructor to hide the implicit public one.(¯’ñ;
+fsquid:UselessImportCheck"?Remove this unused import 'org.apache.log4j.BasicConfigurator'.(§Ê³âşÿÿÿÿ
+Xsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(•êÙºÿÿÿÿÿ

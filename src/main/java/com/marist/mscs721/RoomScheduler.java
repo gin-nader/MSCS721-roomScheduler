@@ -8,9 +8,7 @@ import java.io.*;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
 
 
 /**
@@ -166,6 +164,8 @@ public class RoomScheduler {
     // Forces input to be an integer
     try {
       capacity = keyboard.nextInt();
+      // Eats newline char
+      keyboard.nextLine();
       logger.info(capacity);
     } catch (InputMismatchException exception) {
       logger.error(exception);
@@ -179,7 +179,16 @@ public class RoomScheduler {
       System.out.println("Room capacity must be at least 5.");
       return "";
     }
-    Room newRoom = new Room(name, capacity);
+
+    System.out.println("Enter building name: ");
+    String building = keyboard.nextLine();
+    logger.info(building);
+
+    System.out.println("Enter location name: ");
+    String location = keyboard.nextLine();
+    logger.info(location);
+
+    Room newRoom = new Room(name, capacity, building, location);
     roomList.add(newRoom);
 
     return "Room '" + newRoom.getName() + "' added successfully!";
@@ -216,11 +225,12 @@ public class RoomScheduler {
    * @return String    a string that displays how many rooms are in the room list
    */
   protected static String listRooms(ArrayList<Room> roomList) {
-    System.out.println("Room Name - Capacity");
+    System.out.println("Room Name  \tCapacity \tBuilding \tLocation");
     System.out.println(SEPARATOR);
 
     for (Room room : roomList) {
-      System.out.println(room.getName() + " - " + room.getCapacity());
+      System.out.println(room.getName() + "\t\t" + room.getCapacity() + "\t\t" + room.getBuilding() + "\t" +
+                                                                                          room.getLocation());
     }
 
     System.out.println(SEPARATOR);
@@ -244,95 +254,121 @@ public class RoomScheduler {
    */
   protected static String scheduleRoom(ArrayList<Room> roomList) {
     System.out.println("Schedule a room:");
+
+    // Eats newline char
+    keyboard.nextLine();
+    System.out.println("Start Date? (yyyy-mm-dd):");
+    String startDate = keyboard.nextLine();
+    logger.info(startDate);
+    System.out.println("Start Time? (h:mm):");
+    String startTime = keyboard.nextLine();
+    logger.info(startTime);
+    startTime = startTime + ":00.0";
+
+    System.out.println("End Date? (yyyy-mm-dd):");
+    String endDate = keyboard.nextLine();
+    logger.info(endDate);
+    System.out.println("End Time? (h:mm):");
+    String endTime = keyboard.nextLine();
+    logger.info(endTime);
+    endTime = endTime + ":00.0";
+
+    // Checks if user input matches proper Timestamp format
+    SimpleDateFormat format = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSSSS");
+    try {
+      format.parse(startDate + " " + startTime);
+    } catch (ParseException e) {
+      System.out.println("Invalid format for start date or start time.");
+      logger.error(e);
+      return "";
+    }
+
+    Timestamp startTimestamp = Timestamp.valueOf(startDate + " " + startTime);
+
+    // Same as above but for endTimestamp
+    try {
+      format.parse(endDate + " " + endTime);
+    } catch (ParseException e) {
+      System.out.println("Invalid format for end date or end time.");
+      logger.error(e);
+      return "";
+    }
+
+    Timestamp endTimestamp = Timestamp.valueOf(endDate + " " + endTime);
+
+    Date date= new Date();
+    long time = date.getTime();
+    Timestamp currentTimestamp = new Timestamp(time);
+    if(currentTimestamp.after(endTimestamp) || currentTimestamp.after(startTimestamp)) {
+      System.out.println("Sorry, a meeting cannot be created in the past");
+      logger.error("Sorry, a meeting cannot be created in the past");
+      return "";
+    }
+
+    if(!roomList.isEmpty()) {
+      System.out.println("Would you like to see a list of available rooms? Y/N");
+      logger.info("Would you like to see a list of available rooms? Y/N");
+      String input = keyboard.next();
+      logger.info(input);
+
+      if (input.toUpperCase().charAt(0) == 'Y') {
+        String answer = roomsAvailable(startTimestamp, endTimestamp, roomList);
+        System.out.println(answer);
+        logger.info(answer);
+      }
+    }
+
     String name = getRoomName();
     Room curRoom = getRoomFromName(roomList, name);
 
     if (curRoom.getCapacity() == -1) {
       return "";
-    } else {
-      System.out.println("Start Date? (yyyy-mm-dd):");
-      String startDate = keyboard.nextLine();
-      logger.info(startDate);
-      System.out.println("Start Time? (h:mm):");
-      String startTime = keyboard.nextLine();
-      logger.info(startTime);
-      startTime = startTime + ":00.0";
-
-      System.out.println("End Date? (yyyy-mm-dd):");
-      String endDate = keyboard.nextLine();
-      logger.info(endDate);
-      System.out.println("End Time? (h:mm):");
-      String endTime = keyboard.nextLine();
-      logger.info(endTime);
-      endTime = endTime + ":00.0";
-
-      // Checks if user input matches proper Timestamp format
-      SimpleDateFormat format = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSSSS");
-      try {
-        format.parse(startDate + " " + startTime);
-      } catch (ParseException e) {
-        System.out.println("Invalid format for start date or start time.");
-        logger.error(e);
-        return "";
-      }
-
-      Timestamp startTimestamp = Timestamp.valueOf(startDate + " " + startTime);
-
-      // Same as above but for endTimestamp
-      try {
-        format.parse(endDate + " " + endTime);
-      } catch (ParseException e) {
-        System.out.println("Invalid format for end date or end time.");
-        logger.error(e);
-        return "";
-      }
-
-      Timestamp endTimestamp = Timestamp.valueOf(endDate + " " + endTime);
+    }
 
     /* Checks if a start time starts in the middle of an existing meeting, checks if an end time ends in the middle of
      * an existing meeting, checks if a meeting starts before and ends after an existing meeting, checks if a start time
      * is the same start time as an existing meeting, and checks if the end time is the same as the end time of
      * an existing meeting.
      */
-      if (!roomList.isEmpty() && getRoomFromName(roomList, name).getMeetings().size() > 0) {
-        for (int i = 0; i < roomList.size(); i++) {
-          if (startTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(0).getStartTime())
-              && startTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime())) {
-            System.out.println("Sorry, a meeting cannot start in the middle of another meeting");
-            logger.error("Sorry, a meeting cannot start in the middle of another meeting");
-            return "";
-          } else if (startTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(0).getStartTime())
-              && endTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime())) {
-            System.out.println("Sorry, a meeting cannot start before and end after another meeting.");
-            logger.error("Sorry, a meeting cannot start before and end after another meeting.");
-            return "";
-          } else if (endTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(0).getStartTime())
-              && endTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime())) {
-            System.out.println("Sorry, a meeting cannot end in the middle of another meeting");
-            logger.error("Sorry, a meeting cannot end in the middle of another meeting");
-            return "";
-          } else if (startTimestamp.equals(getRoomFromName(roomList, name).getMeetings().get(0).getStartTime())) {
-            System.out.println("Sorry, a meeting start time cannot be the same as another meeting start time");
-            logger.error("Sorry, a meeting start time cannot be the same as another meeting start time");
-            return "";
-          } else if (endTimestamp.equals(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime())) {
-            System.out.println("Sorry, a meeting end time cannot be the same as another meeting end time");
-            logger.error("Sorry, a meeting end time cannot be the same as another meeting end time");
-            return "";
-          }
+    if (!roomList.isEmpty() && getRoomFromName(roomList, name).getMeetings().size() > 0) {
+      for (int i = 0; i < roomList.size(); i++) {
+        if (startTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(0).getStartTime())
+            && startTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime())) {
+          System.out.println("Sorry, a meeting cannot start in the middle of another meeting");
+          logger.error("Sorry, a meeting cannot start in the middle of another meeting");
+          return "";
+        } else if (startTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(0).getStartTime())
+            && endTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime())) {
+          System.out.println("Sorry, a meeting cannot start before and end after another meeting.");
+          logger.error("Sorry, a meeting cannot start before and end after another meeting.");
+          return "";
+        } else if (endTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(0).getStartTime())
+            && endTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime())) {
+          System.out.println("Sorry, a meeting cannot end in the middle of another meeting");
+          logger.error("Sorry, a meeting cannot end in the middle of another meeting");
+          return "";
+        } else if (startTimestamp.equals(getRoomFromName(roomList, name).getMeetings().get(0).getStartTime())) {
+          System.out.println("Sorry, a meeting start time cannot be the same as another meeting start time");
+          logger.error("Sorry, a meeting start time cannot be the same as another meeting start time");
+          return "";
+        } else if (endTimestamp.equals(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime())) {
+          System.out.println("Sorry, a meeting end time cannot be the same as another meeting end time");
+          logger.error("Sorry, a meeting end time cannot be the same as another meeting end time");
+          return "";
         }
       }
-      System.out.println("Subject?");
-      String subject = keyboard.nextLine();
-      logger.info(subject);
-
-      Meeting meeting = new Meeting(startTimestamp, endTimestamp, subject);
-
-      curRoom.addMeeting(meeting);
-
-      return "Successfully scheduled meeting!\n";
     }
+    System.out.println("Subject?");
+    String subject = keyboard.nextLine();
+    logger.info(subject);
+
+    Meeting meeting = new Meeting(startTimestamp, endTimestamp, subject);
+
+    curRoom.addMeeting(meeting);
+
+    return "Successfully scheduled meeting!\n";
   }
+
 
   /**
    * This method allows the user to export the room list to JSON so that they can save the room list for a later
@@ -396,7 +432,7 @@ public class RoomScheduler {
   protected static Room getRoomFromName(ArrayList<Room> roomList, String name) {
     // Checks if room exists in roomList
     if (findRoomIndex(roomList, name) == -1) {
-      return new Room("error", -1);
+      return new Room("error", -1, "N/A", "N/A");
     }
     return roomList.get(findRoomIndex(roomList, name));
   }
@@ -451,6 +487,38 @@ public class RoomScheduler {
     logger.info(selection);
 
     return selection;
+  }
+
+  protected static String roomsAvailable(Timestamp startTimestamp, Timestamp endTimestamp, ArrayList<Room> roomList){
+    ArrayList<Room> availableList = new ArrayList<>();
+    if(!roomList.isEmpty()) {
+      for (int i = 0; i < roomList.size(); i++) {
+        if(!roomList.get(i).getMeetings().isEmpty()) {
+          if (!roomList.get(i).getMeetings().get(i).getStartTime().equals(startTimestamp) &&
+                  !roomList.get(i).getMeetings().get(i).getStopTime().equals(endTimestamp)) {
+            if (startTimestamp.before(roomList.get(i).getMeetings().get(i).getStartTime()) &&
+                    endTimestamp.before(roomList.get(i).getMeetings().get(i).getStopTime())) {
+              availableList.add(roomList.get(i));
+            } else if (startTimestamp.after(roomList.get(i).getMeetings().get(i).getStartTime()) &&
+                    endTimestamp.after(roomList.get(i).getMeetings().get(i).getStopTime())) {
+              availableList.add(roomList.get(i));
+            }
+          }
+        }
+      }
+    }
+    if(!availableList.isEmpty()) {
+      System.out.println(SEPARATOR);
+      for (int i = 0; i < availableList.size(); i++) {
+        System.out.println(availableList.get(i).getName() + " Schedule");
+        System.out.println(availableList.get(i).getMeetings().toString());
+      }
+      System.out.println(SEPARATOR);
+    }
+    else{
+      return "All rooms are available";
+    }
+    return "List of available rooms";
   }
 
 }

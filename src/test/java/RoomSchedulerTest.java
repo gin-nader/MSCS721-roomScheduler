@@ -17,7 +17,7 @@ import static org.junit.Assert.assertEquals;
 public class RoomSchedulerTest{
 
     RoomScheduler rs = new RoomScheduler();
-    Room room = new Room("Test", 20);
+    Room room = new Room("Test", 20, "TestBuilding", "TestLocation");
     ArrayList<Room> rooms = new ArrayList<Room>();
 
   /**

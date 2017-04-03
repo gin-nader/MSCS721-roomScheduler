@@ -1,1 +1,1 @@
-[{"name":"Test","capacity":20,"meetings":[{"startTime":"Apr 5, 2017 3:00:00 AM","stopTime":"Apr 5, 2017 4:00:00 AM","subject":"Test subject"}],"building":"test building","location":"test location"}]
+[{"name":"Test","capacity":20,"meetings":[{"startTime":"Apr 5, 2017 3:00:00 AM","stopTime":"Apr 5, 2017 4:00:00 AM","subject":"Test subject"},{"startTime":"Apr 5, 2017 1:00:00 AM","stopTime":"Apr 5, 2017 2:00:00 AM","subject":"MSCS 721"}],"building":"test building","location":"test location"}]

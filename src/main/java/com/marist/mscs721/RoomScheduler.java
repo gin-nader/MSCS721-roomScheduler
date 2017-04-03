@@ -332,29 +332,31 @@ public class RoomScheduler {
      */
     if (!roomList.isEmpty() && getRoomFromName(roomList, name).getMeetings().size() > 0) {
       for (int i = 0; i < roomList.size(); i++) {
-        if (startTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(0).getStartTime())
-            && startTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime())) {
-          System.out.println("Sorry, a meeting cannot start in the middle of another meeting");
-          logger.error("Sorry, a meeting cannot start in the middle of another meeting");
-          return "";
-        } else if (startTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(0).getStartTime())
-            && endTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime())) {
-          System.out.println("Sorry, a meeting cannot start before and end after another meeting.");
-          logger.error("Sorry, a meeting cannot start before and end after another meeting.");
-          return "";
-        } else if (endTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(0).getStartTime())
-            && endTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime())) {
-          System.out.println("Sorry, a meeting cannot end in the middle of another meeting");
-          logger.error("Sorry, a meeting cannot end in the middle of another meeting");
-          return "";
-        } else if (startTimestamp.equals(getRoomFromName(roomList, name).getMeetings().get(0).getStartTime())) {
-          System.out.println("Sorry, a meeting start time cannot be the same as another meeting start time");
-          logger.error("Sorry, a meeting start time cannot be the same as another meeting start time");
-          return "";
-        } else if (endTimestamp.equals(getRoomFromName(roomList, name).getMeetings().get(0).getStopTime())) {
-          System.out.println("Sorry, a meeting end time cannot be the same as another meeting end time");
-          logger.error("Sorry, a meeting end time cannot be the same as another meeting end time");
-          return "";
+        for(int j = 0; j < roomList.get(i).getMeetings().size(); j++) {
+          if (startTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(j).getStartTime())
+              && startTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(j).getStopTime())) {
+            System.out.println("Sorry, a meeting cannot start in the middle of another meeting");
+            logger.error("Sorry, a meeting cannot start in the middle of another meeting");
+            return "";
+          } else if (startTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(j).getStartTime())
+              && endTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(j).getStopTime())) {
+            System.out.println("Sorry, a meeting cannot start before and end after another meeting.");
+            logger.error("Sorry, a meeting cannot start before and end after another meeting.");
+            return "";
+          } else if (endTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(j).getStartTime())
+              && endTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(j).getStopTime())) {
+            System.out.println("Sorry, a meeting cannot end in the middle of another meeting");
+            logger.error("Sorry, a meeting cannot end in the middle of another meeting");
+            return "";
+          } else if (startTimestamp.equals(getRoomFromName(roomList, name).getMeetings().get(j).getStartTime())) {
+            System.out.println("Sorry, a meeting start time cannot be the same as another meeting start time");
+            logger.error("Sorry, a meeting start time cannot be the same as another meeting start time");
+            return "";
+          } else if (endTimestamp.equals(getRoomFromName(roomList, name).getMeetings().get(j).getStopTime())) {
+            System.out.println("Sorry, a meeting end time cannot be the same as another meeting end time");
+            logger.error("Sorry, a meeting end time cannot be the same as another meeting end time");
+            return "";
+          }
         }
       }
     }
@@ -494,31 +496,36 @@ public class RoomScheduler {
     if(!roomList.isEmpty()) {
       for (int i = 0; i < roomList.size(); i++) {
         if(!roomList.get(i).getMeetings().isEmpty()) {
+          for(int j = 0; j < roomList.get(i).getMeetings().size(); j++){
           if (!roomList.get(i).getMeetings().get(i).getStartTime().equals(startTimestamp) &&
                   !roomList.get(i).getMeetings().get(i).getStopTime().equals(endTimestamp)) {
             if (startTimestamp.before(roomList.get(i).getMeetings().get(i).getStartTime()) &&
-                    endTimestamp.before(roomList.get(i).getMeetings().get(i).getStopTime())) {
+                endTimestamp.before(roomList.get(i).getMeetings().get(i).getStopTime())) {
               availableList.add(roomList.get(i));
             } else if (startTimestamp.after(roomList.get(i).getMeetings().get(i).getStartTime()) &&
-                    endTimestamp.after(roomList.get(i).getMeetings().get(i).getStopTime())) {
+                endTimestamp.after(roomList.get(i).getMeetings().get(i).getStopTime())) {
               availableList.add(roomList.get(i));
             }
           }
+          }
+        }
+        else {
+          availableList.add(roomList.get(i));
         }
       }
     }
     if(!availableList.isEmpty()) {
       System.out.println(SEPARATOR);
+      System.out.println("List of available rooms");
       for (int i = 0; i < availableList.size(); i++) {
-        System.out.println(availableList.get(i).getName() + " Schedule");
-        System.out.println(availableList.get(i).getMeetings().toString());
+        System.out.println(availableList.get(i).getName());
       }
       System.out.println(SEPARATOR);
     }
     else{
-      return "All rooms are available";
+      return "No rooms are available";
     }
-    return "List of available rooms";
+    return availableList.size() + "Room(s) available\n";
   }
 
 }

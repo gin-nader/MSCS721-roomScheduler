@@ -18,6 +18,10 @@ public class RoomSchedulerTest{
 
     RoomScheduler rs = new RoomScheduler();
     Room room = new Room("Test", 20, "TestBuilding", "TestLocation");
+    Room room2 = new Room("Test2", 20, "TestBuilding2", "TestLocation2");
+    Room room3 = new Room("Test3", 20, "TestBuilding3", "TestLocation3");
+    Meeting testMeeting = new Meeting(Timestamp.valueOf("2017-02-19 3:00:00.0"), Timestamp.valueOf("2017-02-19 4:00:00.0"),
+            "MSCS721");
     ArrayList<Room> rooms = new ArrayList<Room>();
 
   /**
@@ -39,4 +43,15 @@ public class RoomSchedulerTest{
       assertEquals(rs.importFromJson(rooms), "Successfully imported JSON to objects!");
     }
 
+    @Test
+    public void testRoomsAvailable(){
+        room.addMeeting(testMeeting);
+        rooms.add(room);
+        rooms.add(room2);
+        rooms.add(room3);
+
+        String answer = rs.roomsAvailable(Timestamp.valueOf("2017-02-19 3:00:00.0"),
+                                                Timestamp.valueOf("2017-02-19 4:00:00.0"), rooms);
+        assertEquals("2 Room(s) available\n", answer);
+    }
 }

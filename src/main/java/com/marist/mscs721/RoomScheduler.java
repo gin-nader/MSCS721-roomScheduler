@@ -517,25 +517,42 @@ public class RoomScheduler {
     return selection;
   }
 
-  protected static String roomsAvailable(Timestamp startTimestamp, Timestamp endTimestamp, ArrayList<Room> roomList){
+  /**
+   * This method takes in roomList, startTimestamp and endTimestamp from the scheduleRoom method, and it determines if there
+   * are any scheduling conflicts. If there is a conflict, then it does not add the room to a new list called
+   * availableList. If there is no conflict, then it adds the room to the available list. After it has checked all
+   * the rooms in roomList, it will display the availableList to the user. If there are no available rooms, then
+   * it tells the user that no rooms are available.
+   *
+   * @param startTimestamp    the timestamp for the beginning of the meeting
+   * @param endTimestamp      the timestamp for the end of the meeting
+   * @param roomList          the room list that contains all of the rooms
+   * @return String           a string that tells the user how many rooms are available
+   */
+  public static String roomsAvailable(Timestamp startTimestamp, Timestamp endTimestamp, ArrayList<Room> roomList){
     ArrayList<Room> availableList = new ArrayList<>();
+    boolean conflictFound = false;
     if(!roomList.isEmpty()) {
       for (int i = 0; i < roomList.size(); i++) {
+        conflictFound = false;
         if(!roomList.get(i).getMeetings().isEmpty()) {
-          for(int j = 0; j < roomList.get(i).getMeetings().size(); j++){
-          if (!roomList.get(i).getMeetings().get(i).getStartTime().equals(startTimestamp) &&
-                  !roomList.get(i).getMeetings().get(i).getStopTime().equals(endTimestamp)) {
-            if (startTimestamp.before(roomList.get(i).getMeetings().get(i).getStartTime()) &&
-                endTimestamp.before(roomList.get(i).getMeetings().get(i).getStopTime())) {
-              availableList.add(roomList.get(i));
-            } else if (startTimestamp.after(roomList.get(i).getMeetings().get(i).getStartTime()) &&
-                endTimestamp.after(roomList.get(i).getMeetings().get(i).getStopTime())) {
-              availableList.add(roomList.get(i));
+          for(int j = 0; j < roomList.get(i).getMeetings().size(); j++) {
+            if (!roomList.get(i).getMeetings().get(j).getStartTime().equals(startTimestamp) &&
+                    !roomList.get(i).getMeetings().get(j).getStopTime().equals(endTimestamp)) {
+              conflictFound = false;
+            } else if (startTimestamp.before(roomList.get(i).getMeetings().get(j).getStartTime()) &&
+                    endTimestamp.before(roomList.get(i).getMeetings().get(j).getStopTime())) {
+              conflictFound = false;
+            } else if (startTimestamp.after(roomList.get(i).getMeetings().get(j).getStartTime()) &&
+                    endTimestamp.after(roomList.get(i).getMeetings().get(j).getStopTime())) {
+              conflictFound = false;
+            } else {
+              conflictFound = true;
+              break;
             }
           }
-          }
         }
-        else {
+        if (conflictFound == false){
           availableList.add(roomList.get(i));
         }
       }
@@ -551,8 +568,9 @@ public class RoomScheduler {
     else{
       return "No rooms are available";
     }
-    return availableList.size() + "Room(s) available\n";
+    return availableList.size() + " Room(s) available\n";
   }
+<<<<<<< HEAD
 
   /**
    * http://stackoverflow.com/questions/10174898/how-to-check-whether-a-given-string-is-valid-json-in-java
@@ -565,4 +583,6 @@ public class RoomScheduler {
       return false;
     }
   }
+=======
+>>>>>>> e7037aa2ddb9124345cd803b737109a36d4226d1
 }

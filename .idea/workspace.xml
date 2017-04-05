@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f5b149f-31ba-480c-9fa9-6bebcae6bd33" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/marist/mscs721/RoomScheduler.class" afterPath="$PROJECT_DIR$/target/classes/com/marist/mscs721/RoomScheduler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/file.json" afterPath="$PROJECT_DIR$/file.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/marist/mscs721/RoomScheduler.java" afterPath="$PROJECT_DIR$/src/main/java/com/marist/mscs721/RoomScheduler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/RoomSchedulerTest.java" afterPath="$PROJECT_DIR$/src/test/java/RoomSchedulerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user-actions.log" afterPath="$PROJECT_DIR$/user-actions.log" />
-    </list>
+    <list default="true" id="7f5b149f-31ba-480c-9fa9-6bebcae6bd33" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -594,7 +587,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />

@@ -455,3 +455,135 @@
 2017-04-03 16:12:01 INFO  RoomScheduler:55 - 
 2017-04-03 16:12:07 INFO  RoomScheduler:137 - 8
 2017-04-03 16:12:07 INFO  RoomScheduler:79 - User quit program
+2017-04-04 15:41:38 DEBUG RoomScheduler:388 - [{"name":"Test","capacity":20,"meetings":[],"building":"TestBuilding","location":"TestLocation"}]
+2017-04-04 15:42:22 DEBUG RoomScheduler:388 - [{"name":"Test","capacity":20,"meetings":[],"building":"TestBuilding","location":"TestLocation"}]
+2017-04-04 15:43:23 DEBUG RoomScheduler:388 - [{"name":"Test","capacity":20,"meetings":[],"building":"TestBuilding","location":"TestLocation"}]
+2017-04-04 15:54:09 ERROR RoomScheduler:139 - java.util.InputMismatchException
+2017-04-04 15:54:09 ERROR RoomScheduler:145 - Please enter a valid number from 1 - 8.
+2017-04-04 15:54:10 INFO  RoomScheduler:137 - 1
+2017-04-04 15:54:12 INFO  RoomScheduler:489 - Test
+2017-04-04 15:54:13 INFO  RoomScheduler:169 - 20
+2017-04-04 15:54:15 INFO  RoomScheduler:185 - Test
+2017-04-04 15:54:17 INFO  RoomScheduler:189 - test
+2017-04-04 15:54:17 INFO  RoomScheduler:45 - Room 'Test' added successfully!
+2017-04-04 15:55:45 DEBUG RoomScheduler:388 - [{"name":"Test","capacity":20,"meetings":[],"building":"TestBuilding","location":"TestLocation"}]
+2017-04-04 15:57:12 DEBUG RoomScheduler:388 - [{"name":"Test","capacity":20,"meetings":[],"building":"TestBuilding","location":"TestLocation"}]
+2017-04-04 15:57:42 DEBUG RoomScheduler:388 - [{"name":"Test","capacity":20,"meetings":[],"building":"TestBuilding","location":"TestLocation"}]
+2017-04-04 16:08:47 DEBUG RoomScheduler:388 - [{"name":"Test","capacity":20,"meetings":[],"building":"TestBuilding","location":"TestLocation"}]
+2017-04-04 16:13:03 DEBUG RoomScheduler:388 - [{"name":"Test","capacity":20,"meetings":[],"building":"TestBuilding","location":"TestLocation"}]
+2017-04-04 16:17:33 DEBUG RoomScheduler:388 - [{"name":"Test","capacity":20,"meetings":[],"building":"TestBuilding","location":"TestLocation"}]
+2017-04-04 16:18:31 DEBUG RoomScheduler:388 - [{"name":"Test","capacity":20,"meetings":[],"building":"TestBuilding","location":"TestLocation"}]
+2017-04-04 16:22:15 DEBUG RoomScheduler:388 - [{"name":"Test","capacity":20,"meetings":[],"building":"TestBuilding","location":"TestLocation"}]
+2017-04-04 21:13:19 INFO  RoomScheduler:137 - 7
+2017-04-04 21:13:19 ERROR RoomScheduler:421 - java.io.FileNotFoundException: 
+2017-04-04 21:13:19 INFO  RoomScheduler:75 - Error related to JSON file has occurred.
+2017-04-04 21:15:48 INFO  RoomScheduler:137 - 7
+2017-04-04 21:15:51 INFO  RoomScheduler:75 - Successfully imported JSON to objects!
+2017-04-04 21:15:59 INFO  RoomScheduler:137 - 5
+2017-04-04 21:15:59 INFO  RoomScheduler:65 - 1 Room(s)
+2017-04-04 21:17:06 INFO  RoomScheduler:137 - 8
+2017-04-04 21:17:06 INFO  RoomScheduler:79 - User quit program
+2017-04-04 21:17:14 INFO  RoomScheduler:137 - 7
+2017-04-04 21:18:00 INFO  RoomScheduler:137 - 7
+2017-04-04 21:18:01 ERROR RoomScheduler:423 - java.io.FileNotFoundException: asd (The system cannot find the file specified)
+2017-04-04 21:18:01 INFO  RoomScheduler:75 - Error related to JSON file has occurred.
+2017-04-04 21:18:16 INFO  RoomScheduler:137 - 8
+2017-04-04 21:18:16 INFO  RoomScheduler:79 - User quit program
+2017-04-04 21:21:14 INFO  RoomScheduler:137 - 7
+2017-04-04 21:21:15 INFO  RoomScheduler:415 - asd
+2017-04-04 21:22:01 INFO  RoomScheduler:137 - 7
+2017-04-04 21:22:04 INFO  RoomScheduler:415 - asddqwdqwd
+2017-04-04 21:22:04 INFO  RoomScheduler:75 - File must be .json
+2017-04-04 21:22:28 INFO  RoomScheduler:137 - 7
+2017-04-04 21:22:30 INFO  RoomScheduler:415 - wiokjwefiojewfijop
+2017-04-04 21:22:30 INFO  RoomScheduler:75 - File must be .json
+2017-04-04 21:22:35 INFO  RoomScheduler:137 - 7
+2017-04-04 21:22:39 INFO  RoomScheduler:415 - .json
+2017-04-04 21:22:39 INFO  RoomScheduler:75 - File must be .json
+2017-04-04 21:23:41 INFO  RoomScheduler:137 - 7
+2017-04-04 21:23:44 INFO  RoomScheduler:415 - file.json
+2017-04-04 21:23:44 INFO  RoomScheduler:75 - File must be .json
+2017-04-04 21:30:30 INFO  RoomScheduler:139 - 7
+2017-04-04 21:30:31 INFO  RoomScheduler:416 - jnikodesfjnoi
+2017-04-04 21:30:31 INFO  RoomScheduler:77 - Not a valid.json file.
+2017-04-04 21:30:37 INFO  RoomScheduler:139 - 7
+2017-04-04 21:30:43 INFO  RoomScheduler:416 - asdwed.json
+2017-04-04 21:30:43 INFO  RoomScheduler:77 - Not a valid.json file.
+2017-04-04 21:30:46 INFO  RoomScheduler:139 - 7
+2017-04-04 21:30:49 INFO  RoomScheduler:416 - file.json
+2017-04-04 21:30:49 INFO  RoomScheduler:77 - Not a valid.json file.
+2017-04-04 21:32:59 INFO  RoomScheduler:141 - 7
+2017-04-04 21:33:01 INFO  RoomScheduler:418 - asijubhadwn
+2017-04-04 21:33:01 ERROR RoomScheduler:440 - java.io.FileNotFoundException: asijubhadwn (The system cannot find the file specified)
+2017-04-04 21:33:01 INFO  RoomScheduler:79 - Error related to JSON file has occurred.
+2017-04-04 21:33:24 INFO  RoomScheduler:141 - 7
+2017-04-04 21:33:27 INFO  RoomScheduler:418 - awdokpasd.json
+2017-04-04 21:33:27 ERROR RoomScheduler:440 - java.io.FileNotFoundException: awdokpasd.json (The system cannot find the file specified)
+2017-04-04 21:33:27 INFO  RoomScheduler:79 - Error related to JSON file has occurred.
+2017-04-04 21:33:35 INFO  RoomScheduler:141 - 7
+2017-04-04 21:33:40 INFO  RoomScheduler:418 - file.json
+2017-04-04 21:33:40 INFO  RoomScheduler:79 - Successfully imported JSON to objects!
+2017-04-04 21:33:54 INFO  RoomScheduler:141 - 7
+2017-04-04 21:34:00 INFO  RoomScheduler:418 - src\test\notJson.txt
+2017-04-04 21:35:41 INFO  RoomScheduler:141 - 7
+2017-04-04 21:35:46 INFO  RoomScheduler:418 - src\test\notJson.txt
+2017-04-04 21:35:46 ERROR RoomScheduler:440 - com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 1 path $
+2017-04-04 21:35:46 INFO  RoomScheduler:79 - Error related to JSON file has occurred.
+2017-04-04 21:36:04 INFO  RoomScheduler:141 - 7
+2017-04-04 21:36:47 INFO  RoomScheduler:141 - 7
+2017-04-04 21:36:52 INFO  RoomScheduler:418 - src\test\asd
+2017-04-04 21:36:52 ERROR RoomScheduler:440 - java.io.FileNotFoundException: src\test\asd (The system cannot find the file specified)
+2017-04-04 21:36:52 INFO  RoomScheduler:79 - Error related to JSON file has occurred.
+2017-04-04 21:36:57 INFO  RoomScheduler:141 - 7
+2017-04-04 21:37:02 INFO  RoomScheduler:418 - src\test\notJson.txt
+2017-04-04 21:37:02 ERROR RoomScheduler:440 - com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 1 path $
+2017-04-04 21:37:02 INFO  RoomScheduler:79 - Error related to JSON file has occurred.
+2017-04-04 21:38:08 INFO  RoomScheduler:141 - 7
+2017-04-04 21:38:10 INFO  RoomScheduler:418 - file.json
+2017-04-04 21:38:10 INFO  RoomScheduler:79 - Successfully imported JSON to objects!
+2017-04-04 21:38:15 INFO  RoomScheduler:141 - 7
+2017-04-04 21:38:30 INFO  RoomScheduler:418 - src\test\notJson.txt
+2017-04-04 21:38:30 ERROR RoomScheduler:425 - com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 5 path $
+2017-04-04 21:38:30 INFO  RoomScheduler:79 - Not a valid Json String
+2017-04-04 21:39:04 INFO  RoomScheduler:141 - 7
+2017-04-04 21:39:09 INFO  RoomScheduler:418 - notjson.txt
+2017-04-04 21:39:09 ERROR RoomScheduler:436 - com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 1 path $
+2017-04-04 21:39:09 INFO  RoomScheduler:79 - Error related to JSON file has occurred.
+2017-04-04 21:39:30 INFO  RoomScheduler:141 - 7
+2017-04-04 21:39:34 INFO  RoomScheduler:418 - src\test\notJson.txt
+2017-04-04 21:39:34 ERROR RoomScheduler:425 - com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 5 path $
+2017-04-04 21:39:34 INFO  RoomScheduler:79 - Not a valid Json String
+2017-04-04 21:40:23 INFO  RoomScheduler:141 - 7
+2017-04-04 21:40:31 INFO  RoomScheduler:418 - src\test\file.json
+2017-04-04 21:40:31 ERROR RoomScheduler:425 - com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 5 path $
+2017-04-04 21:40:31 INFO  RoomScheduler:79 - Not a valid Json String
+2017-04-04 21:41:31 INFO  RoomScheduler:141 - 7
+2017-04-04 21:41:35 INFO  RoomScheduler:418 - src\test\file.json
+2017-04-04 21:41:35 INFO  RoomScheduler:79 - Successfully imported JSON to objects!
+2017-04-04 21:44:35 INFO  RoomScheduler:141 - 7
+2017-04-04 21:44:38 INFO  RoomScheduler:418 - file.json
+2017-04-04 21:44:38 INFO  RoomScheduler:79 - Not valid JSON file.
+2017-04-04 21:49:56 INFO  RoomScheduler:141 - 7
+2017-04-04 21:49:59 INFO  RoomScheduler:418 - file.json
+2017-04-04 21:49:59 INFO  RoomScheduler:79 - Successfully imported JSON to objects!
+2017-04-04 21:50:01 INFO  RoomScheduler:141 - 7
+2017-04-04 21:50:04 INFO  RoomScheduler:418 - ijkofokwefpokwepfok
+2017-04-04 21:50:04 ERROR RoomScheduler:445 - java.io.FileNotFoundException: ijkofokwefpokwepfok (The system cannot find the file specified)
+2017-04-04 21:50:04 INFO  RoomScheduler:79 - Error related to JSON file has occurred.
+2017-04-04 21:50:15 INFO  RoomScheduler:141 - 7
+2017-04-04 21:50:22 INFO  RoomScheduler:418 - notJson.txt
+2017-04-04 21:50:22 ERROR RoomScheduler:445 - com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 1 path $
+2017-04-04 21:50:22 INFO  RoomScheduler:79 - Error related to JSON file has occurred.
+2017-04-04 21:50:31 INFO  RoomScheduler:141 - 7
+2017-04-04 21:50:40 INFO  RoomScheduler:418 - src\test\notJson.txt
+2017-04-04 21:50:40 ERROR RoomScheduler:445 - com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 1 path $
+2017-04-04 21:50:40 INFO  RoomScheduler:79 - Error related to JSON file has occurred.
+2017-04-04 21:50:47 INFO  RoomScheduler:141 - 7
+2017-04-04 21:50:52 INFO  RoomScheduler:418 - notjson.txt
+2017-04-04 21:50:52 ERROR RoomScheduler:445 - com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_ARRAY but was STRING at line 1 column 1 path $
+2017-04-04 21:50:52 INFO  RoomScheduler:79 - Error related to JSON file has occurred.
+2017-04-04 21:50:54 INFO  RoomScheduler:141 - 7
+2017-04-04 21:51:03 INFO  RoomScheduler:418 - src\test\file.json
+2017-04-04 21:51:03 INFO  RoomScheduler:79 - Successfully imported JSON to objects!
+2017-04-04 21:51:09 INFO  RoomScheduler:141 - 8
+2017-04-04 21:51:09 INFO  RoomScheduler:83 - User quit program

@@ -1,6 +1,8 @@
 package com.marist.mscs721;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonParser;
+import com.google.gson.JsonSyntaxException;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
@@ -26,6 +28,7 @@ public class RoomScheduler {
   static final String ERR_MSG1 = "Integers only, please. Try again.";
   static Logger logger = Logger.getLogger(RoomScheduler.class);
   static boolean debugMode = true;
+  private static final Gson gson = new Gson();
 
   /**
    * Main method for the class. This is where the main menu is called, and the user is prompted to enter a number
@@ -35,6 +38,7 @@ public class RoomScheduler {
   public static void main(String[] args) throws IOException {
     Boolean end = false;
     ArrayList<Room> rooms = new ArrayList<Room>();
+
 
     while (!end) {
       switch (mainMenu()) {
@@ -381,7 +385,7 @@ public class RoomScheduler {
    * @return String  a string that displays that the objects were successfully exported to JSON
    */
   public static String exportToJson(ArrayList<Room> roomList) throws IOException {
-    Gson gson = new Gson();
+
 
     String json = gson.toJson(roomList);
     if(debugMode) {
@@ -407,15 +411,37 @@ public class RoomScheduler {
    * @return String  a string that displays that the import was successful
    */
   public static String importFromJson(ArrayList<Room> roomList) throws IOException {
-    Gson gson = new Gson();
+    System.out.println("Enter filename you wish to import from.");
+    // Eats newline char
+    keyboard.nextLine();
+    String filename = keyboard.nextLine();
+    logger.info(filename);
 
-    try (Reader reader = new FileReader("file.json")) {
+    try{
+      JsonParser parser = new JsonParser();
+      if(filename.contains("/")) {
+        parser.parse(filename.substring(filename.lastIndexOf('/') + 1));
+      }
+      else if(filename.contains("\\")){
+        parser.parse(filename.substring(filename.lastIndexOf('\\') + 1));
+      }
+      else {
+        parser.parse(filename);
+      }
+    }
+    catch(JsonSyntaxException jse) {
+      logger.error(jse);
+      return "Not a valid Json String";
+    }
+
+
+    try (Reader reader = new FileReader(filename)) {
       Room[] roomArr = gson.fromJson(reader, Room[].class);
 
       for (int i = 0; i < roomArr.length; i++) {
         roomList.add(roomArr[i]);
       }
-    } catch (IOException e) {
+    } catch (Exception e) { // Catches IO exceptions and null pointer exceptions
       logger.error(e);
       return "Error related to JSON file has occurred.";
     }
@@ -544,4 +570,19 @@ public class RoomScheduler {
     }
     return availableList.size() + " Room(s) available\n";
   }
+<<<<<<< HEAD
+
+  /**
+   * http://stackoverflow.com/questions/10174898/how-to-check-whether-a-given-string-is-valid-json-in-java
+   */
+  public static boolean isJSONValid(String jsonInString) {
+    try {
+      gson.fromJson(jsonInString, Object.class);
+      return true;
+    } catch(com.google.gson.JsonSyntaxException ex) {
+      return false;
+    }
+  }
+=======
+>>>>>>> e7037aa2ddb9124345cd803b737109a36d4226d1
 }

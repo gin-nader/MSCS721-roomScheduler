@@ -1,0 +1,557 @@
+2017-04-04 16:25:06 INFO  RoomScheduler:137 - 3
+2017-04-04 16:25:09 INFO  RoomScheduler:262 - q
+2017-04-04 16:25:10 INFO  RoomScheduler:265 - q
+2017-04-04 16:25:10 INFO  RoomScheduler:270 - q
+2017-04-04 16:25:11 INFO  RoomScheduler:273 - q
+2017-04-04 16:25:11 ERROR RoomScheduler:282 - java.text.ParseException: Unparseable date: "q q:00.0"
+2017-04-04 16:25:11 INFO  RoomScheduler:55 - 
+2017-04-04 16:25:49 INFO  RoomScheduler:137 - 3
+2017-04-04 16:26:29 INFO  RoomScheduler:137 - 5
+2017-04-04 16:26:29 INFO  RoomScheduler:65 - 0 Room(s)
+2017-04-04 16:26:31 INFO  RoomScheduler:137 - 5
+2017-04-04 16:26:31 INFO  RoomScheduler:65 - 0 Room(s)
+2017-04-04 16:26:38 INFO  RoomScheduler:137 - 5
+2017-04-04 16:26:38 INFO  RoomScheduler:65 - 0 Room(s)
+2017-04-04 16:31:11 ERROR RoomScheduler:139 - java.util.InputMismatchException
+2017-04-04 16:31:11 ERROR RoomScheduler:145 - Please enter a valid number from 1 - 8.
+2017-04-04 16:32:08 INFO  RoomScheduler:137 - 1
+2017-04-04 16:32:09 ERROR RoomScheduler:139 - java.util.InputMismatchException
+2017-04-04 16:32:09 ERROR RoomScheduler:145 - Please enter a valid number from 1 - 8.
+2017-04-04 16:32:09 INFO  RoomScheduler:137 - 20
+2017-04-04 16:32:09 ERROR RoomScheduler:145 - Please enter a valid number from 1 - 8.
+2017-04-04 17:49:12 INFO  RoomScheduler:137 - 1
+2017-04-04 17:49:12 INFO  RoomScheduler:489 - Test
+2017-04-04 17:49:12 INFO  RoomScheduler:169 - 20
+2017-04-04 17:49:12 INFO  RoomScheduler:185 - Test Building
+2017-04-04 17:49:12 INFO  RoomScheduler:189 - Test Location
+2017-04-04 17:49:12 INFO  RoomScheduler:45 - Room 'Test' added successfully!
+2017-04-04 17:49:12 INFO  RoomScheduler:137 - 8
+2017-04-04 17:49:12 INFO  RoomScheduler:79 - User quit program
+2017-04-04 17:49:26 INFO  RoomScheduler:137 - 1
+2017-04-04 17:49:26 INFO  RoomScheduler:489 - Test
+2017-04-04 17:49:26 INFO  RoomScheduler:169 - 20
+2017-04-04 17:49:26 INFO  RoomScheduler:185 - Test Building
+2017-04-04 17:49:26 INFO  RoomScheduler:189 - Test Location
+2017-04-04 17:49:26 INFO  RoomScheduler:45 - Room 'Test' added successfully!
+2017-04-04 17:49:42 INFO  RoomScheduler:137 - 1
+2017-04-04 17:49:42 INFO  RoomScheduler:489 - Test
+2017-04-04 17:49:42 INFO  RoomScheduler:169 - 20
+2017-04-04 17:49:42 INFO  RoomScheduler:185 - Test Building
+2017-04-04 17:49:42 INFO  RoomScheduler:189 - Test Location
+2017-04-04 17:49:42 INFO  RoomScheduler:45 - Room 'Test' added successfully!
+2017-04-04 17:49:42 INFO  RoomScheduler:137 - 8
+2017-04-04 17:49:42 INFO  RoomScheduler:79 - User quit program
+2017-04-04 17:51:32 INFO  RoomScheduler:137 - 1
+2017-04-04 17:51:32 INFO  RoomScheduler:489 - Test
+2017-04-04 17:51:32 INFO  RoomScheduler:169 - 20
+2017-04-04 17:51:32 INFO  RoomScheduler:185 - Test Building
+2017-04-04 17:51:32 INFO  RoomScheduler:189 - Test Location
+2017-04-04 17:51:32 INFO  RoomScheduler:45 - Room 'Test' added successfully!
+2017-04-04 17:51:32 INFO  RoomScheduler:137 - 8
+2017-04-04 17:51:32 INFO  RoomScheduler:79 - User quit program
+2017-04-04 17:51:45 INFO  RoomScheduler:137 - 1
+2017-04-04 17:51:45 INFO  RoomScheduler:489 - Test
+2017-04-04 17:51:45 INFO  RoomScheduler:169 - 20
+2017-04-04 17:51:45 INFO  RoomScheduler:185 - Test Building
+2017-04-04 17:51:45 INFO  RoomScheduler:189 - Test Location
+2017-04-04 17:51:45 INFO  RoomScheduler:45 - Room 'Test' added successfully!
+2017-04-04 17:51:45 INFO  RoomScheduler:137 - 6
+2017-04-04 17:51:45 DEBUG RoomScheduler:388 - [{"name":"Test","capacity":20,"meetings":[],"building":"Test Building","location":"Test Location"}]
+2017-04-04 17:51:45 INFO  RoomScheduler:70 - Successfully exported objects to JSON!
+2017-04-04 17:51:45 INFO  RoomScheduler:137 - 8
+2017-04-04 17:51:45 INFO  RoomScheduler:79 - User quit program
+2017-04-04 17:52:47 INFO  RoomScheduler:137 - 1
+2017-04-04 17:52:47 INFO  RoomScheduler:489 - Test
+2017-04-04 17:52:47 INFO  RoomScheduler:169 - 20
+2017-04-04 17:52:47 INFO  RoomScheduler:185 - Test Building
+2017-04-04 17:52:47 INFO  RoomScheduler:189 - Test Location
+2017-04-04 17:52:47 INFO  RoomScheduler:45 - Room 'Test' added successfully!
+2017-04-04 17:52:47 INFO  RoomScheduler:137 - 6
+2017-04-04 17:52:47 DEBUG RoomScheduler:388 - [{"name":"Test","capacity":20,"meetings":[],"building":"Test Building","location":"Test Location"}]
+2017-04-04 17:52:47 INFO  RoomScheduler:70 - Successfully exported objects to JSON!
+2017-04-04 17:52:47 INFO  RoomScheduler:137 - 8
+2017-04-04 17:52:47 INFO  RoomScheduler:79 - User quit program
+2017-04-04 18:02:37 INFO  RoomScheduler:137 - 1
+2017-04-04 18:02:37 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:02:37 INFO  RoomScheduler:169 - 20
+2017-04-04 18:02:37 INFO  RoomScheduler:185 - Test Building
+2017-04-04 18:02:37 INFO  RoomScheduler:189 - Test Location
+2017-04-04 18:02:37 INFO  RoomScheduler:45 - Room 'Room 101' added successfully!
+2017-04-04 18:02:37 INFO  RoomScheduler:137 - 6
+2017-04-04 18:02:37 DEBUG RoomScheduler:388 - [{"name":"Room 101","capacity":20,"meetings":[],"building":"Test Building","location":"Test Location"}]
+2017-04-04 18:02:37 INFO  RoomScheduler:70 - Successfully exported objects to JSON!
+2017-04-04 18:02:37 INFO  RoomScheduler:137 - 3
+2017-04-04 18:02:37 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 18:02:37 INFO  RoomScheduler:265 - 1:00
+2017-04-04 18:02:37 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 18:02:37 INFO  RoomScheduler:273 - 2:00
+2017-04-04 18:02:37 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 18:02:37 INFO  RoomScheduler:312 - n
+2017-04-04 18:02:37 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:02:37 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 18:02:37 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 18:02:37 INFO  RoomScheduler:137 - 8
+2017-04-04 18:02:37 INFO  RoomScheduler:79 - User quit program
+2017-04-04 18:02:39 INFO  RoomScheduler:137 - 1
+2017-04-04 18:02:39 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:02:39 INFO  RoomScheduler:169 - 20
+2017-04-04 18:02:39 INFO  RoomScheduler:185 - Test Building
+2017-04-04 18:02:39 INFO  RoomScheduler:189 - Test Location
+2017-04-04 18:02:39 INFO  RoomScheduler:45 - Room 'Room 101' added successfully!
+2017-04-04 18:02:39 INFO  RoomScheduler:137 - 6
+2017-04-04 18:02:40 DEBUG RoomScheduler:388 - [{"name":"Room 101","capacity":20,"meetings":[],"building":"Test Building","location":"Test Location"}]
+2017-04-04 18:02:40 INFO  RoomScheduler:70 - Successfully exported objects to JSON!
+2017-04-04 18:02:40 INFO  RoomScheduler:137 - 3
+2017-04-04 18:02:40 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 18:02:40 INFO  RoomScheduler:265 - 1:00
+2017-04-04 18:02:40 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 18:02:40 INFO  RoomScheduler:273 - 2:00
+2017-04-04 18:02:40 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 18:02:40 INFO  RoomScheduler:312 - n
+2017-04-04 18:02:40 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:02:40 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 18:02:40 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 18:02:40 INFO  RoomScheduler:137 - 8
+2017-04-04 18:02:40 INFO  RoomScheduler:79 - User quit program
+2017-04-04 18:03:21 INFO  RoomScheduler:137 - 1
+2017-04-04 18:03:21 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:03:21 INFO  RoomScheduler:169 - 20
+2017-04-04 18:03:21 INFO  RoomScheduler:185 - Test Building
+2017-04-04 18:03:21 INFO  RoomScheduler:189 - Test Location
+2017-04-04 18:03:21 INFO  RoomScheduler:45 - Room 'Room 101' added successfully!
+2017-04-04 18:03:21 INFO  RoomScheduler:137 - 6
+2017-04-04 18:03:21 DEBUG RoomScheduler:388 - [{"name":"Room 101","capacity":20,"meetings":[],"building":"Test Building","location":"Test Location"}]
+2017-04-04 18:03:21 INFO  RoomScheduler:70 - Successfully exported objects to JSON!
+2017-04-04 18:03:21 INFO  RoomScheduler:137 - 3
+2017-04-04 18:03:21 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 18:03:21 INFO  RoomScheduler:265 - 1:00
+2017-04-04 18:03:21 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 18:03:21 INFO  RoomScheduler:273 - 2:00
+2017-04-04 18:03:21 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 18:03:21 INFO  RoomScheduler:312 - n
+2017-04-04 18:03:21 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:03:21 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 18:03:21 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 18:03:21 INFO  RoomScheduler:137 - 3
+2017-04-04 18:03:21 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 18:03:21 INFO  RoomScheduler:265 - 3:00
+2017-04-04 18:03:21 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 18:03:21 INFO  RoomScheduler:273 - 4:00
+2017-04-04 18:03:21 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 18:03:21 INFO  RoomScheduler:312 - n
+2017-04-04 18:03:21 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:03:21 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 18:03:21 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 18:03:21 INFO  RoomScheduler:137 - 3
+2017-04-04 18:03:21 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 18:03:21 INFO  RoomScheduler:265 - 5:00
+2017-04-04 18:03:21 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 18:03:21 INFO  RoomScheduler:273 - 6:00
+2017-04-04 18:03:21 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 18:03:21 INFO  RoomScheduler:312 - n
+2017-04-04 18:03:21 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:03:21 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 18:03:21 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 18:03:21 INFO  RoomScheduler:137 - 8
+2017-04-04 18:03:21 INFO  RoomScheduler:79 - User quit program
+2017-04-04 18:04:43 INFO  RoomScheduler:137 - 1
+2017-04-04 18:04:43 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:04:43 INFO  RoomScheduler:169 - 20
+2017-04-04 18:04:43 INFO  RoomScheduler:185 - Test Building
+2017-04-04 18:04:43 INFO  RoomScheduler:189 - Test Location
+2017-04-04 18:04:43 INFO  RoomScheduler:45 - Room 'Room 101' added successfully!
+2017-04-04 18:04:43 INFO  RoomScheduler:137 - 6
+2017-04-04 18:04:43 DEBUG RoomScheduler:388 - [{"name":"Room 101","capacity":20,"meetings":[],"building":"Test Building","location":"Test Location"}]
+2017-04-04 18:04:43 INFO  RoomScheduler:70 - Successfully exported objects to JSON!
+2017-04-04 18:04:43 INFO  RoomScheduler:137 - 3
+2017-04-04 18:04:43 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 18:04:43 INFO  RoomScheduler:265 - 1:00
+2017-04-04 18:04:43 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 18:04:43 INFO  RoomScheduler:273 - 2:00
+2017-04-04 18:04:43 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 18:04:43 INFO  RoomScheduler:312 - n
+2017-04-04 18:04:43 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:04:43 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 18:04:43 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 18:04:43 INFO  RoomScheduler:137 - 3
+2017-04-04 18:04:43 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 18:04:43 INFO  RoomScheduler:265 - 3:00
+2017-04-04 18:04:43 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 18:04:43 INFO  RoomScheduler:273 - 4:00
+2017-04-04 18:04:43 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 18:04:43 INFO  RoomScheduler:312 - n
+2017-04-04 18:04:43 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:04:43 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 18:04:43 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 18:04:43 INFO  RoomScheduler:137 - 3
+2017-04-04 18:04:43 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 18:04:43 INFO  RoomScheduler:265 - 5:00
+2017-04-04 18:04:43 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 18:04:43 INFO  RoomScheduler:273 - 6:00
+2017-04-04 18:04:43 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 18:04:43 INFO  RoomScheduler:312 - n
+2017-04-04 18:04:43 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:04:43 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 18:04:43 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 18:04:43 INFO  RoomScheduler:137 - 8
+2017-04-04 18:04:43 INFO  RoomScheduler:79 - User quit program
+2017-04-04 18:31:40 INFO  RoomScheduler:137 - 1
+2017-04-04 18:31:40 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:31:40 INFO  RoomScheduler:169 - 20
+2017-04-04 18:31:40 INFO  RoomScheduler:185 - Test Building
+2017-04-04 18:31:40 INFO  RoomScheduler:189 - Test Location
+2017-04-04 18:31:40 INFO  RoomScheduler:45 - Room 'Room 101' added successfully!
+2017-04-04 18:31:40 INFO  RoomScheduler:137 - 6
+2017-04-04 18:31:40 DEBUG RoomScheduler:388 - [{"name":"Room 101","capacity":20,"meetings":[],"building":"Test Building","location":"Test Location"}]
+2017-04-04 18:31:40 INFO  RoomScheduler:70 - Successfully exported objects to JSON!
+2017-04-04 18:31:40 INFO  RoomScheduler:137 - 3
+2017-04-04 18:31:40 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 18:31:40 INFO  RoomScheduler:265 - 1:00
+2017-04-04 18:31:40 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 18:31:40 INFO  RoomScheduler:273 - 2:00
+2017-04-04 18:31:40 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 18:31:40 INFO  RoomScheduler:312 - n
+2017-04-04 18:31:40 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:31:40 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 18:31:40 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 18:31:40 INFO  RoomScheduler:137 - 3
+2017-04-04 18:31:40 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 18:31:40 INFO  RoomScheduler:265 - 3:00
+2017-04-04 18:31:40 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 18:31:40 INFO  RoomScheduler:273 - 4:00
+2017-04-04 18:31:40 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 18:31:40 INFO  RoomScheduler:312 - n
+2017-04-04 18:31:40 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:31:40 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 18:31:40 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 18:31:40 INFO  RoomScheduler:137 - 3
+2017-04-04 18:31:40 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 18:31:40 INFO  RoomScheduler:265 - 5:00
+2017-04-04 18:31:40 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 18:31:40 INFO  RoomScheduler:273 - 6:00
+2017-04-04 18:31:40 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 18:31:40 INFO  RoomScheduler:312 - n
+2017-04-04 18:31:40 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:31:40 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 18:31:40 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 18:31:40 INFO  RoomScheduler:137 - 8
+2017-04-04 18:31:40 INFO  RoomScheduler:79 - User quit program
+2017-04-04 18:54:34 INFO  RoomScheduler:137 - 1
+2017-04-04 18:54:34 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:54:34 INFO  RoomScheduler:169 - 20
+2017-04-04 18:54:34 INFO  RoomScheduler:185 - Test Building
+2017-04-04 18:54:34 INFO  RoomScheduler:189 - Test Location
+2017-04-04 18:54:34 INFO  RoomScheduler:45 - Room 'Room 101' added successfully!
+2017-04-04 18:54:34 INFO  RoomScheduler:137 - 6
+2017-04-04 18:54:34 DEBUG RoomScheduler:388 - [{"name":"Room 101","capacity":20,"meetings":[],"building":"Test Building","location":"Test Location"}]
+2017-04-04 18:54:34 INFO  RoomScheduler:70 - Successfully exported objects to JSON!
+2017-04-04 18:54:34 INFO  RoomScheduler:137 - 3
+2017-04-04 18:54:34 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 18:54:34 INFO  RoomScheduler:265 - 1:00
+2017-04-04 18:54:34 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 18:54:34 INFO  RoomScheduler:273 - 2:00
+2017-04-04 18:54:34 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 18:54:34 INFO  RoomScheduler:312 - n
+2017-04-04 18:54:34 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:54:34 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 18:54:34 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 18:54:34 INFO  RoomScheduler:137 - 3
+2017-04-04 18:54:34 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 18:54:34 INFO  RoomScheduler:265 - 3:00
+2017-04-04 18:54:34 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 18:54:34 INFO  RoomScheduler:273 - 4:00
+2017-04-04 18:54:34 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 18:54:34 INFO  RoomScheduler:312 - n
+2017-04-04 18:54:34 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:54:34 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 18:54:34 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 18:54:34 INFO  RoomScheduler:137 - 3
+2017-04-04 18:54:34 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 18:54:34 INFO  RoomScheduler:265 - 5:00
+2017-04-04 18:54:34 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 18:54:34 INFO  RoomScheduler:273 - 6:00
+2017-04-04 18:54:34 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 18:54:34 INFO  RoomScheduler:312 - n
+2017-04-04 18:54:34 INFO  RoomScheduler:489 - Room 101
+2017-04-04 18:54:34 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 18:54:34 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 18:54:34 INFO  RoomScheduler:137 - 8
+2017-04-04 18:54:34 INFO  RoomScheduler:79 - User quit program
+2017-04-04 20:50:52 INFO  RoomScheduler:137 - 1
+2017-04-04 20:50:52 INFO  RoomScheduler:489 - Room 101
+2017-04-04 20:50:52 INFO  RoomScheduler:169 - 20
+2017-04-04 20:50:52 INFO  RoomScheduler:185 - Test Building
+2017-04-04 20:50:52 INFO  RoomScheduler:189 - Test Location
+2017-04-04 20:50:52 INFO  RoomScheduler:45 - Room 'Room 101' added successfully!
+2017-04-04 20:50:52 INFO  RoomScheduler:137 - 6
+2017-04-04 20:50:56 DEBUG RoomScheduler:388 - [{"name":"Room 101","capacity":20,"meetings":[],"building":"Test Building","location":"Test Location"}]
+2017-04-04 20:50:56 INFO  RoomScheduler:70 - Successfully exported objects to JSON!
+2017-04-04 20:50:56 INFO  RoomScheduler:137 - 3
+2017-04-04 20:50:56 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 20:50:56 INFO  RoomScheduler:265 - 1:00
+2017-04-04 20:50:56 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 20:50:56 INFO  RoomScheduler:273 - 2:00
+2017-04-04 20:50:56 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 20:50:56 INFO  RoomScheduler:312 - n
+2017-04-04 20:50:56 INFO  RoomScheduler:489 - Room 101
+2017-04-04 20:50:56 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 20:50:56 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 20:50:56 INFO  RoomScheduler:137 - 3
+2017-04-04 20:50:56 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 20:50:56 INFO  RoomScheduler:265 - 3:00
+2017-04-04 20:50:56 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 20:50:56 INFO  RoomScheduler:273 - 4:00
+2017-04-04 20:50:56 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 20:50:56 INFO  RoomScheduler:312 - n
+2017-04-04 20:50:56 INFO  RoomScheduler:489 - Room 101
+2017-04-04 20:50:56 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 20:50:56 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 20:50:56 INFO  RoomScheduler:137 - 3
+2017-04-04 20:50:56 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 20:50:56 INFO  RoomScheduler:265 - 5:00
+2017-04-04 20:50:56 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 20:50:56 INFO  RoomScheduler:273 - 6:00
+2017-04-04 20:50:56 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 20:50:56 INFO  RoomScheduler:312 - n
+2017-04-04 20:50:56 INFO  RoomScheduler:489 - Room 101
+2017-04-04 20:50:56 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 20:50:56 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 20:50:56 INFO  RoomScheduler:137 - 8
+2017-04-04 20:50:56 INFO  RoomScheduler:79 - User quit program
+2017-04-04 20:51:51 INFO  RoomScheduler:137 - 1
+2017-04-04 20:51:51 INFO  RoomScheduler:489 - Room 101
+2017-04-04 20:51:51 INFO  RoomScheduler:169 - 20
+2017-04-04 20:51:51 INFO  RoomScheduler:185 - Test Building
+2017-04-04 20:51:51 INFO  RoomScheduler:189 - Test Location
+2017-04-04 20:51:51 INFO  RoomScheduler:45 - Room 'Room 101' added successfully!
+2017-04-04 20:51:51 INFO  RoomScheduler:137 - 6
+2017-04-04 20:51:51 DEBUG RoomScheduler:388 - [{"name":"Room 101","capacity":20,"meetings":[],"building":"Test Building","location":"Test Location"}]
+2017-04-04 20:51:51 INFO  RoomScheduler:70 - Successfully exported objects to JSON!
+2017-04-04 20:51:51 INFO  RoomScheduler:137 - 3
+2017-04-04 20:51:51 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 20:51:51 INFO  RoomScheduler:265 - 1:00
+2017-04-04 20:51:51 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 20:51:51 INFO  RoomScheduler:273 - 2:00
+2017-04-04 20:51:51 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 20:51:51 INFO  RoomScheduler:312 - n
+2017-04-04 20:51:51 INFO  RoomScheduler:489 - Room 101
+2017-04-04 20:51:51 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 20:51:51 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 20:51:51 INFO  RoomScheduler:137 - 3
+2017-04-04 20:51:51 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 20:51:51 INFO  RoomScheduler:265 - 3:00
+2017-04-04 20:51:51 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 20:51:51 INFO  RoomScheduler:273 - 4:00
+2017-04-04 20:51:51 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 20:51:51 INFO  RoomScheduler:312 - n
+2017-04-04 20:51:51 INFO  RoomScheduler:489 - Room 101
+2017-04-04 20:51:51 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 20:51:51 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 20:51:51 INFO  RoomScheduler:137 - 3
+2017-04-04 20:51:51 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 20:51:51 INFO  RoomScheduler:265 - 5:00
+2017-04-04 20:51:51 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 20:51:51 INFO  RoomScheduler:273 - 6:00
+2017-04-04 20:51:51 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 20:51:51 INFO  RoomScheduler:312 - n
+2017-04-04 20:51:51 INFO  RoomScheduler:489 - Room 101
+2017-04-04 20:51:51 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 20:51:51 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 20:51:51 INFO  RoomScheduler:137 - 8
+2017-04-04 20:51:51 INFO  RoomScheduler:79 - User quit program
+2017-04-04 20:55:05 INFO  RoomScheduler:137 - 1
+2017-04-04 20:55:05 INFO  RoomScheduler:489 - Room 101
+2017-04-04 20:55:05 INFO  RoomScheduler:169 - 20
+2017-04-04 20:55:05 INFO  RoomScheduler:185 - Test Building
+2017-04-04 20:55:05 INFO  RoomScheduler:189 - Test Location
+2017-04-04 20:55:05 INFO  RoomScheduler:45 - Room 'Room 101' added successfully!
+2017-04-04 20:55:05 INFO  RoomScheduler:137 - 6
+2017-04-04 20:55:05 DEBUG RoomScheduler:388 - [{"name":"Room 101","capacity":20,"meetings":[],"building":"Test Building","location":"Test Location"}]
+2017-04-04 20:55:05 INFO  RoomScheduler:70 - Successfully exported objects to JSON!
+2017-04-04 20:55:05 INFO  RoomScheduler:137 - 3
+2017-04-04 20:55:05 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 20:55:05 INFO  RoomScheduler:265 - 1:00
+2017-04-04 20:55:05 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 20:55:05 INFO  RoomScheduler:273 - 2:00
+2017-04-04 20:55:05 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 20:55:05 INFO  RoomScheduler:312 - n
+2017-04-04 20:55:05 INFO  RoomScheduler:489 - Room 101
+2017-04-04 20:55:05 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 20:55:05 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 20:55:05 INFO  RoomScheduler:137 - 3
+2017-04-04 20:55:05 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 20:55:05 INFO  RoomScheduler:265 - 3:00
+2017-04-04 20:55:05 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 20:55:05 INFO  RoomScheduler:273 - 4:00
+2017-04-04 20:55:05 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 20:55:05 INFO  RoomScheduler:312 - n
+2017-04-04 20:55:05 INFO  RoomScheduler:489 - Room 101
+2017-04-04 20:55:05 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 20:55:05 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 20:55:05 INFO  RoomScheduler:137 - 3
+2017-04-04 20:55:05 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 20:55:05 INFO  RoomScheduler:265 - 5:00
+2017-04-04 20:55:05 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 20:55:05 INFO  RoomScheduler:273 - 6:00
+2017-04-04 20:55:05 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 20:55:05 INFO  RoomScheduler:312 - n
+2017-04-04 20:55:05 INFO  RoomScheduler:489 - Room 101
+2017-04-04 20:55:05 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 20:55:05 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 20:55:05 INFO  RoomScheduler:137 - 8
+2017-04-04 20:55:05 INFO  RoomScheduler:79 - User quit program
+2017-04-04 20:56:07 INFO  RoomScheduler:137 - 1
+2017-04-04 20:56:07 INFO  RoomScheduler:489 - Room 101
+2017-04-04 20:56:07 INFO  RoomScheduler:169 - 20
+2017-04-04 20:56:07 INFO  RoomScheduler:185 - Test Building
+2017-04-04 20:56:07 INFO  RoomScheduler:189 - Test Location
+2017-04-04 20:56:07 INFO  RoomScheduler:45 - Room 'Room 101' added successfully!
+2017-04-04 20:56:07 INFO  RoomScheduler:137 - 6
+2017-04-04 20:56:07 DEBUG RoomScheduler:388 - [{"name":"Room 101","capacity":20,"meetings":[],"building":"Test Building","location":"Test Location"}]
+2017-04-04 20:56:07 INFO  RoomScheduler:70 - Successfully exported objects to JSON!
+2017-04-04 20:56:07 INFO  RoomScheduler:137 - 3
+2017-04-04 20:56:07 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 20:56:07 INFO  RoomScheduler:265 - 1:00
+2017-04-04 20:56:07 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 20:56:07 INFO  RoomScheduler:273 - 2:00
+2017-04-04 20:56:07 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 20:56:07 INFO  RoomScheduler:312 - n
+2017-04-04 20:56:07 INFO  RoomScheduler:489 - Room 101
+2017-04-04 20:56:07 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 20:56:07 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 20:56:07 INFO  RoomScheduler:137 - 3
+2017-04-04 20:56:07 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 20:56:07 INFO  RoomScheduler:265 - 3:00
+2017-04-04 20:56:07 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 20:56:07 INFO  RoomScheduler:273 - 4:00
+2017-04-04 20:56:07 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 20:56:07 INFO  RoomScheduler:312 - n
+2017-04-04 20:56:07 INFO  RoomScheduler:489 - Room 101
+2017-04-04 20:56:07 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 20:56:07 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 20:56:07 INFO  RoomScheduler:137 - 3
+2017-04-04 20:56:07 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 20:56:07 INFO  RoomScheduler:265 - 5:00
+2017-04-04 20:56:07 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 20:56:07 INFO  RoomScheduler:273 - 6:00
+2017-04-04 20:56:07 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 20:56:07 INFO  RoomScheduler:312 - n
+2017-04-04 20:56:07 INFO  RoomScheduler:489 - Room 101
+2017-04-04 20:56:07 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 20:56:07 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 20:56:07 INFO  RoomScheduler:137 - 8
+2017-04-04 20:56:07 INFO  RoomScheduler:79 - User quit program
+2017-04-04 21:52:07 INFO  RoomScheduler:137 - 1
+2017-04-04 21:52:07 INFO  RoomScheduler:489 - Room 101
+2017-04-04 21:52:07 INFO  RoomScheduler:169 - 20
+2017-04-04 21:52:07 INFO  RoomScheduler:185 - Test Building
+2017-04-04 21:52:07 INFO  RoomScheduler:189 - Test Location
+2017-04-04 21:52:07 INFO  RoomScheduler:45 - Room 'Room 101' added successfully!
+2017-04-04 21:52:07 INFO  RoomScheduler:137 - 6
+2017-04-04 21:52:07 DEBUG RoomScheduler:388 - [{"name":"Room 101","capacity":20,"meetings":[],"building":"Test Building","location":"Test Location"}]
+2017-04-04 21:52:07 INFO  RoomScheduler:70 - Successfully exported objects to JSON!
+2017-04-04 21:52:07 INFO  RoomScheduler:137 - 3
+2017-04-04 21:52:07 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 21:52:07 INFO  RoomScheduler:265 - 1:00
+2017-04-04 21:52:07 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 21:52:07 INFO  RoomScheduler:273 - 2:00
+2017-04-04 21:52:07 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 21:52:07 INFO  RoomScheduler:312 - n
+2017-04-04 21:52:07 INFO  RoomScheduler:489 - Room 101
+2017-04-04 21:52:07 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 21:52:07 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 21:52:07 INFO  RoomScheduler:137 - 3
+2017-04-04 21:52:07 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 21:52:07 INFO  RoomScheduler:265 - 3:00
+2017-04-04 21:52:07 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 21:52:07 INFO  RoomScheduler:273 - 4:00
+2017-04-04 21:52:07 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 21:52:07 INFO  RoomScheduler:312 - n
+2017-04-04 21:52:07 INFO  RoomScheduler:489 - Room 101
+2017-04-04 21:52:07 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 21:52:07 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 21:52:07 INFO  RoomScheduler:137 - 3
+2017-04-04 21:52:07 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 21:52:07 INFO  RoomScheduler:265 - 5:00
+2017-04-04 21:52:07 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 21:52:07 INFO  RoomScheduler:273 - 6:00
+2017-04-04 21:52:07 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 21:52:07 INFO  RoomScheduler:312 - n
+2017-04-04 21:52:07 INFO  RoomScheduler:489 - Room 101
+2017-04-04 21:52:07 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 21:52:07 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 21:52:07 INFO  RoomScheduler:137 - 8
+2017-04-04 21:52:07 INFO  RoomScheduler:79 - User quit program
+2017-04-04 21:52:20 INFO  RoomScheduler:137 - 1
+2017-04-04 21:52:20 INFO  RoomScheduler:489 - Room 101
+2017-04-04 21:52:20 INFO  RoomScheduler:169 - 20
+2017-04-04 21:52:20 INFO  RoomScheduler:185 - Test Building
+2017-04-04 21:52:20 INFO  RoomScheduler:189 - Test Location
+2017-04-04 21:52:20 INFO  RoomScheduler:45 - Room 'Room 101' added successfully!
+2017-04-04 21:52:20 INFO  RoomScheduler:137 - 6
+2017-04-04 21:52:20 DEBUG RoomScheduler:388 - [{"name":"Room 101","capacity":20,"meetings":[],"building":"Test Building","location":"Test Location"}]
+2017-04-04 21:52:20 INFO  RoomScheduler:70 - Successfully exported objects to JSON!
+2017-04-04 21:52:20 INFO  RoomScheduler:137 - 3
+2017-04-04 21:52:20 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 21:52:20 INFO  RoomScheduler:265 - 1:00
+2017-04-04 21:52:20 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 21:52:20 INFO  RoomScheduler:273 - 2:00
+2017-04-04 21:52:20 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 21:52:20 INFO  RoomScheduler:312 - n
+2017-04-04 21:52:20 INFO  RoomScheduler:489 - Room 101
+2017-04-04 21:52:20 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 21:52:20 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 21:52:20 INFO  RoomScheduler:137 - 3
+2017-04-04 21:52:20 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 21:52:20 INFO  RoomScheduler:265 - 3:00
+2017-04-04 21:52:20 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 21:52:20 INFO  RoomScheduler:273 - 4:00
+2017-04-04 21:52:20 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 21:52:20 INFO  RoomScheduler:312 - n
+2017-04-04 21:52:20 INFO  RoomScheduler:489 - Room 101
+2017-04-04 21:52:20 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 21:52:20 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 21:52:20 INFO  RoomScheduler:137 - 3
+2017-04-04 21:52:20 INFO  RoomScheduler:262 - 2017-04-05
+2017-04-04 21:52:20 INFO  RoomScheduler:265 - 5:00
+2017-04-04 21:52:20 INFO  RoomScheduler:270 - 2017-04-05
+2017-04-04 21:52:20 INFO  RoomScheduler:273 - 6:00
+2017-04-04 21:52:20 INFO  RoomScheduler:310 - Would you like to see a list of available rooms? Y/N
+2017-04-04 21:52:20 INFO  RoomScheduler:312 - n
+2017-04-04 21:52:20 INFO  RoomScheduler:489 - Room 101
+2017-04-04 21:52:20 INFO  RoomScheduler:365 - MSCS 721
+2017-04-04 21:52:20 INFO  RoomScheduler:55 - Successfully scheduled meeting!
+
+2017-04-04 21:52:20 INFO  RoomScheduler:137 - 8
+2017-04-04 21:52:20 INFO  RoomScheduler:79 - User quit program

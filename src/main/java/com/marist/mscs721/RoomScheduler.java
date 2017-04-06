@@ -7,6 +7,7 @@ import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 import java.io.*;
+import java.sql.Time;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -28,6 +29,7 @@ public class RoomScheduler {
   static final String ERR_MSG1 = "Integers only, please. Try again.";
   static Logger logger = Logger.getLogger(RoomScheduler.class);
   static boolean debugMode = true;
+  static boolean systemTest = true;
   private static final Gson gson = new Gson();
 
   /**
@@ -329,41 +331,10 @@ public class RoomScheduler {
       return "";
     }
 
-    /* Checks if a start time starts in the middle of an existing meeting, checks if an end time ends in the middle of
-     * an existing meeting, checks if a meeting starts before and ends after an existing meeting, checks if a start time
-     * is the same start time as an existing meeting, and checks if the end time is the same as the end time of
-     * an existing meeting.
-     */
-    if (!roomList.isEmpty() && getRoomFromName(roomList, name).getMeetings().size() > 0) {
-      for (int i = 0; i < roomList.size(); i++) {
-        for(int j = 0; j < roomList.get(i).getMeetings().size(); j++) {
-          if (startTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(j).getStartTime())
-              && startTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(j).getStopTime())) {
-            System.out.println("Sorry, a meeting cannot start in the middle of another meeting");
-            logger.error("Sorry, a meeting cannot start in the middle of another meeting");
-            return "";
-          } else if (startTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(j).getStartTime())
-              && endTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(j).getStopTime())) {
-            System.out.println("Sorry, a meeting cannot start before and end after another meeting.");
-            logger.error("Sorry, a meeting cannot start before and end after another meeting.");
-            return "";
-          } else if (endTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(j).getStartTime())
-              && endTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(j).getStopTime())) {
-            System.out.println("Sorry, a meeting cannot end in the middle of another meeting");
-            logger.error("Sorry, a meeting cannot end in the middle of another meeting");
-            return "";
-          } else if (startTimestamp.equals(getRoomFromName(roomList, name).getMeetings().get(j).getStartTime())) {
-            System.out.println("Sorry, a meeting start time cannot be the same as another meeting start time");
-            logger.error("Sorry, a meeting start time cannot be the same as another meeting start time");
-            return "";
-          } else if (endTimestamp.equals(getRoomFromName(roomList, name).getMeetings().get(j).getStopTime())) {
-            System.out.println("Sorry, a meeting end time cannot be the same as another meeting end time");
-            logger.error("Sorry, a meeting end time cannot be the same as another meeting end time");
-            return "";
-          }
-        }
-      }
+    if(isScheduleValid(roomList, endTimestamp, startTimestamp, name) == false && systemTest == false){
+      return "";
     }
+
     System.out.println("Subject?");
     String subject = keyboard.nextLine();
     logger.info(subject);
@@ -393,7 +364,12 @@ public class RoomScheduler {
       System.out.println(json);
     }
 
-    try (FileWriter writer = new FileWriter("file.json")) {
+    System.out.print("Enter name of file you want to export to.");
+    // Eats newline char
+    keyboard.nextLine();
+    String filename = keyboard.nextLine();
+
+    try (FileWriter writer = new FileWriter(filename)) {
       gson.toJson(roomList, writer);
     } catch (IOException e) {
       logger.error(e);
@@ -434,9 +410,13 @@ public class RoomScheduler {
       return "Not a valid Json String";
     }
 
-
     try (Reader reader = new FileReader(filename)) {
       Room[] roomArr = gson.fromJson(reader, Room[].class);
+
+      if(roomArr.length == 0){
+        return "JSON file is empty.";
+      }
+
 
       for (int i = 0; i < roomArr.length; i++) {
         roomList.add(roomArr[i]);
@@ -570,19 +550,45 @@ public class RoomScheduler {
     }
     return availableList.size() + " Room(s) available\n";
   }
-<<<<<<< HEAD
 
-  /**
-   * http://stackoverflow.com/questions/10174898/how-to-check-whether-a-given-string-is-valid-json-in-java
-   */
-  public static boolean isJSONValid(String jsonInString) {
-    try {
-      gson.fromJson(jsonInString, Object.class);
-      return true;
-    } catch(com.google.gson.JsonSyntaxException ex) {
-      return false;
+  /** This method Checks if a start time starts in the middle of an existing meeting, checks if an end time ends in the
+   * middle of an existing meeting, checks if a meeting starts before and ends after an existing meeting, checks if a
+   * start time is the same start time as an existing meeting, and checks if the end time is the same as the end time
+   * of an existing meeting.
+   **/
+  private static boolean isScheduleValid(ArrayList<Room> roomList, Timestamp endTimestamp, Timestamp startTimestamp,
+                                         String name) {
+
+    if (!roomList.isEmpty() && getRoomFromName(roomList, name).getMeetings().size() > 0) {
+      for (int i = 0; i < roomList.size(); i++) {
+        for (int j = 0; j < roomList.get(i).getMeetings().size(); j++) {
+          if (startTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(j).getStartTime())
+                  && startTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(j).getStopTime())) {
+            System.out.println("Sorry, a meeting cannot start in the middle of another meeting");
+            logger.error("Sorry, a meeting cannot start in the middle of another meeting");
+            return false;
+          } else if (startTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(j).getStartTime())
+                  && endTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(j).getStopTime())) {
+            System.out.println("Sorry, a meeting cannot start before and end after another meeting.");
+            logger.error("Sorry, a meeting cannot start before and end after another meeting.");
+            return false;
+          } else if (endTimestamp.after(getRoomFromName(roomList, name).getMeetings().get(j).getStartTime())
+                  && endTimestamp.before(getRoomFromName(roomList, name).getMeetings().get(j).getStopTime())) {
+            System.out.println("Sorry, a meeting cannot end in the middle of another meeting");
+            logger.error("Sorry, a meeting cannot end in the middle of another meeting");
+            return false;
+          } else if (startTimestamp.equals(getRoomFromName(roomList, name).getMeetings().get(j).getStartTime())) {
+            System.out.println("Sorry, a meeting start time cannot be the same as another meeting start time");
+            logger.error("Sorry, a meeting start time cannot be the same as another meeting start time");
+            return false;
+          } else if (endTimestamp.equals(getRoomFromName(roomList, name).getMeetings().get(j).getStopTime())) {
+            System.out.println("Sorry, a meeting end time cannot be the same as another meeting end time");
+            logger.error("Sorry, a meeting end time cannot be the same as another meeting end time");
+            return false;
+          }
+        }
+      }
     }
+    return true;
   }
-=======
->>>>>>> e7037aa2ddb9124345cd803b737109a36d4226d1
 }

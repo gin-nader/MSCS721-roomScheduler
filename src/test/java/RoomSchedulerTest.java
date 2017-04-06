@@ -28,21 +28,25 @@ public class RoomSchedulerTest{
    * This method tests the exportToJson method by checking to see that the method works properly and returns the correct
    * string value.
    */
-    @Test
+    /*@Test
     public void testExportToJson() throws IOException {
         rooms.add(room);
         assertEquals(rs.exportToJson(rooms), "Successfully exported objects to JSON!");
-    }
+    }*/
 
   /**
    * This method tests the importFromJson method by checking to see that the method works properly and returns the correct
    * string value.
    */
-    @Test
+    /*@Test
     public void testImportFromJson() throws IOException {
       assertEquals(rs.importFromJson(rooms), "Successfully imported JSON to objects!");
-    }
+    }*/
 
+    /**
+     * This method tests the roomsAvailable method by adding three rooms and scheduling a meeting to one of the rooms.
+     * It then tries to schedule the same meeting, so it returns that only 2 rooms are available.
+     */
     @Test
     public void testRoomsAvailable(){
         room.addMeeting(testMeeting);

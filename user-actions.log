@@ -1171,3 +1171,19 @@
 2017-04-05 21:35:29 DEBUG RoomScheduler:363 - [{"name":"test","capacity":20,"meetings":[],"building":"test","location":"test"}]
 2017-04-05 21:35:36 INFO  RoomScheduler:76 - Successfully exported objects to JSON!
 2017-04-05 21:56:14 DEBUG RoomScheduler:363 - [{"name":"Test","capacity":20,"meetings":[],"building":"TestBuilding","location":"TestLocation"}]
+2017-04-07 00:25:02 INFO  RoomScheduler:143 - 7
+2017-04-07 00:25:05 INFO  RoomScheduler:394 - file.json
+2017-04-07 00:25:05 INFO  RoomScheduler:81 - Successfully imported JSON to objects!
+2017-04-07 00:25:06 INFO  RoomScheduler:143 - 5
+2017-04-07 00:25:06 INFO  RoomScheduler:71 - 1 Room(s)
+2017-04-07 00:25:08 INFO  RoomScheduler:143 - 3
+2017-04-07 00:25:17 INFO  RoomScheduler:268 - 2017-04-07
+2017-04-07 00:25:18 INFO  RoomScheduler:271 - 1:00
+2017-04-07 00:25:23 INFO  RoomScheduler:276 - 2017-04-07
+2017-04-07 00:25:24 INFO  RoomScheduler:279 - 2:00
+2017-04-07 00:25:24 INFO  RoomScheduler:316 - Would you like to see a list of available rooms? Y/N
+2017-04-07 00:25:26 INFO  RoomScheduler:318 - n
+2017-04-07 00:25:30 INFO  RoomScheduler:495 - test
+2017-04-07 00:25:32 INFO  RoomScheduler:340 - test
+2017-04-07 00:25:32 INFO  RoomScheduler:61 - Successfully scheduled meeting for test!
+

@@ -21,7 +21,10 @@ public class Meeting {
 	}
 
 	public String toString() {
-		return this.getStartTime().toString() + " - " + this.getStopTime() + ": " + getSubject();
+		if(this.getStartTime() != null && this.getStopTime() != null && getSubject() != null) {
+			return this.getStartTime().toString() + " - " + this.getStopTime() + ": " + getSubject();
+		}
+		return "One of the times specified is null or the subject is null";
 	}
 	
 	public Timestamp getStartTime() {

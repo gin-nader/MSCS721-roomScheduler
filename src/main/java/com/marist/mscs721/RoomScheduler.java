@@ -220,7 +220,7 @@ public class RoomScheduler {
       roomList.remove(findRoomIndex(roomList, roomName));
     }
 
-    return "Room removed successfully!";
+    return "Successfully removed " + roomName + "!";
   }
 
   /**
@@ -343,7 +343,7 @@ public class RoomScheduler {
 
     curRoom.addMeeting(meeting);
 
-    return "Successfully scheduled meeting!\n";
+    return "Successfully scheduled meeting for " + name + "!\n";
   }
 
 

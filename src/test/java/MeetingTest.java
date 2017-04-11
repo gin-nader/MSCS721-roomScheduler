@@ -44,4 +44,21 @@ public class MeetingTest {
         "");
     assertEquals(testMeeting.getSubject(), "N/A");
   }
+
+  /**
+   * This method tests that toString() works if none of the fields are null.
+   */
+  @Test
+  public void testToStringSuccess(){
+    assertEquals("2017-02-19 03:00:00.0 - 2017-02-19 04:00:00.0: MSCS721",testMeeting.toString());
+  }
+
+  /**
+   * This method tests that toString() will output an error message if one of the fields is null.
+   */
+  @Test
+  public void testToStringFailure(){
+    testMeeting.setSubject(null);
+    assertEquals("One of the times specified is null or the subject is null",testMeeting.toString());
+  }
 }

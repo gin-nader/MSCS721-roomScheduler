@@ -8,9 +8,7 @@
 FROM ubuntu:14.04
 
 # Install.
-RUN \
-  apt-get update && \
-  apt-get -y upgrade && 
+RUN apt-get update
 
 # Set environment variables.
 ENV HOME /root

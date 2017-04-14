@@ -114,7 +114,56 @@
                     </targetTests>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.rat</groupId>
+                <artifactId>apache-rat-plugin</artifactId>
+                <version>0.12</version>
+            </plugin>
         </plugins>
+        <pluginManagement>
+        <plugins>
+               <plugin>
+                 <groupId>org.apache.rat</groupId>
+                 <artifactId>apache-rat-plugin</artifactId>
+                   <configuration>
+                    <excludes combine.children="append">
+                        <exclude>.sonar/.sonar_lock</exclude>
+                        <exclude>.sonar/report-task.txt</exclude>
+                        <exclude> bin/com/marist/mscs721/Errors.txt</exclude>
+                        <exclude> src/main/java/com/marist/mscs721/Errors.txt</exclude>
+                        <exclude> src/main/java/com/marist/mscs721/package-info.java</exclude>
+                        <exclude>src/main/resources/*</exclude>
+                        <exclude> src/test/empyJson.json</exclude>
+                        <exclude> bin/com/marist/mscs721/Errors.txt</exclude>
+                        <exclude>.sonar/*</exclude>
+                        <exclude> *.txt</exclude>
+                        <exclude> src/test/*.txt</exclude>
+                        <exclude> src/test/*.bat</exclude>
+                        <exclude>*.xml</exclude>
+                        <exclude>*.json</exclude>
+                        <exclude>*.properties</exclude>
+                        <exclude>*.log</exclude>
+                        <exclude>bin/com/marist/mscs721/*.class</exclude>
+                   </excludes>
+                       <licenses>
+                           <license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
+                               <licenseFamilyCategory>TG</licenseFamilyCategory>
+                               <licenseFamilyName>(C) Copyright 2017 Tom Ginader</licenseFamilyName>
+                               <notes></notes>
+                               <patterns>
+                                   <pattern>(C) Copyright 2017 Tom Ginader</pattern>
+                               </patterns>
+                           </license>
+                       </licenses>
+                       <licenseFamilies>
+                           <licenseFamily implementation="org.apache.rat.license.SimpleLicenseFamily">
+                               <familyName>(C) Copyright 2017 Tom Ginader</familyName>
+                           </licenseFamily>
+                       </licenseFamilies>
+                 </configuration>
+               </plugin>
+        </plugins>
+        </pluginManagement>
     </build>
 
     <issueManagement>

@@ -1,3 +1,11 @@
+/*
+ *
+ * (C) Copyright 2017 Tom Ginader
+ *
+ * Anyone can use the Room Scheduler program because it's open source and on github.com
+ *
+ * Contributers: Michael Gildein, Tom Ginader
+ */
 package com.marist.mscs721;
 
 import com.google.gson.Gson;

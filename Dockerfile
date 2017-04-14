@@ -1,6 +1,5 @@
 #
 # Ubuntu Java Dockerfile
-# https://runnable.com/docker/java/dockerize-your-java-application
 
 FROM  phusion/baseimage:0.9.17
 
@@ -27,8 +26,14 @@ RUN echo 'deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main' >> /
 RUN update-java-alternatives -s java-8-oracle
 RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> ~/.bashrc
 
+RUN apt-get install -y git-all
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN git clone https://github.com/gin-nader/MSCS721-roomScheduler.git
+RUN ls -la
+RUN cd MSCS721-roomScheduler/target
+RUN ls -la
 RUN pwd
-RUN java RoomScheduler
+RUN chmod 777 RoomScheduler-1.0-SNAPSHOT-jar-with-dependencies.jar
+RUN java -jar ./RoomScheduler-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 CMD ["/sbin/my_init"]

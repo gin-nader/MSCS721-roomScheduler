@@ -29,9 +29,6 @@ RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> ~/.bashrc
 RUN apt-get install -y git-all
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN git clone https://github.com/gin-nader/MSCS721-roomScheduler.git
-RUN ls -la MSCS721-roomScheduler/target
-RUN pwd
-RUN chmod 777 MSCS721-roomScheduler/target/RoomScheduler-1.0-SNAPSHOT-jar-with-dependencies.jar
-RUN java -jar MSCS721-roomScheduler/target/RoomScheduler-1.0-SNAPSHOT-jar-with-dependencies.jar
+RUN echo "8" | java -jar MSCS721-roomScheduler/target/RoomScheduler-1.0-SNAPSHOT-jar-with-dependencies.jar 
 
 CMD ["/sbin/my_init"]

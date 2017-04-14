@@ -28,5 +28,7 @@ RUN update-java-alternatives -s java-8-oracle
 RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> ~/.bashrc
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN pwd
+RUN java RoomScheduler
 
 CMD ["/sbin/my_init"]
